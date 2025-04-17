@@ -31,6 +31,7 @@ function PrintTest() {
   `;
 
   const handlePrint = () => {
+    console.log("Clicked print!");
     if (window.electronAPI) {
       window.electronAPI.triggerPrint(invoiceHTML);
     } else {
