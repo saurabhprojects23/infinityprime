@@ -31,10 +31,13 @@ function PrintTest() {
   `;
 
   const handlePrint = () => {
-    console.log("Clicked print!");
-    if (window.electronAPI) {
+    console.log("🖱️ clicked print");
+
+    if (window.electronAPI && typeof window.electronAPI.triggerPrint === "function") {
+      console.log("📤 triggerPrint is a function");
       window.electronAPI.triggerPrint(invoiceHTML);
     } else {
+      console.warn("⚠️ window.electronAPI not available, fallback to window.print()");
       const newWindow = window.open('', '_blank');
       newWindow.document.write(invoiceHTML);
       newWindow.document.close();
@@ -45,10 +48,7 @@ function PrintTest() {
   return (
     <div style={{ padding: '20px' }}>
       <h1 className="text-white">🛍️ Infinity Invoice Tester</h1>
-      <button
-        onClick={handlePrint}
-        className="text-white border p-1 px-2 rounded-lg border-green-400"
-      >
+      <button onClick={handlePrint} className="text-white border p-1 px-2 rounded-lg border-green-400">
         🖨️ Print Invoice
       </button>
     </div>
