@@ -16,6 +16,7 @@ import img2 from "../Assets/SUPPLY CHAIN STRATEGIES.jpg";
 import img3 from "../Assets/DIGITAL TRANSFORMATION.jpg";
 import { TbWorld } from "react-icons/tb";
 import { MdOutlineDateRange } from "react-icons/md";
+import PrintTest from "../Pages/PrintTest.js"
 
 
 
@@ -61,6 +62,7 @@ const LandingPage = () => {
       <button className='p-1 px-3 text-white rounded-md border border-white hover:scale-110 transition-all'>
         Contact Us
       </button>
+      <PrintTest/>
      </div>
     </div>
   </div>
