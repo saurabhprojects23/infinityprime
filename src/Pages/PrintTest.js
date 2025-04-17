@@ -9,17 +9,11 @@ function PrintTest() {
       <p><strong>Date:</strong> April 17, 2025</p>
       <table border="1" cellPadding="10" cellSpacing="0" style="margin-top: 20px;">
         <thead>
-          <tr>
-            <th>Item</th><th>Qty</th><th>Price</th>
-          </tr>
+          <tr><th>Item</th><th>Qty</th><th>Price</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Tomatoes</td><td>2 Kg</td><td>₹40</td>
-          </tr>
-          <tr>
-            <td>Potatoes</td><td>1 Kg</td><td>₹20</td>
-          </tr>
+          <tr><td>Tomatoes</td><td>2 Kg</td><td>₹40</td></tr>
+          <tr><td>Potatoes</td><td>1 Kg</td><td>₹20</td></tr>
         </tbody>
       </table>
       <h3>Total: ₹60</h3>
@@ -40,7 +34,9 @@ function PrintTest() {
   return (
     <div className="App" style={{ padding: '20px' }}>
       <h1 className="text-white">🛍️ Infinity Invoice Tester</h1>
-      <button onClick={handlePrint} className="text-white border p-1 px-2 rounded-lg border-green-400">🖨️ Print Invoice</button>
+      <button onClick={handlePrint} className="text-white border p-1 px-2 rounded-lg border-green-400">
+        🖨️ Print Invoice
+      </button>
     </div>
   );
 }
