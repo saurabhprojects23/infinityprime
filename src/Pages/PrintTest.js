@@ -1,7 +1,6 @@
 import React from "react";
 
 function PrintTest() {
-  // Sample invoice HTML
   const invoiceHTML = `
     <html>
       <head>
@@ -31,12 +30,10 @@ function PrintTest() {
     </html>
   `;
 
-  // Print button handler
   const handlePrint = () => {
     if (window.electronAPI) {
-      window.electronAPI.triggerPrint(invoiceHTML);  // Trigger print via Electron API
+      window.electronAPI.triggerPrint(invoiceHTML);
     } else {
-      // Fallback for non-Electron environments (like development mode)
       const newWindow = window.open('', '_blank');
       newWindow.document.write(invoiceHTML);
       newWindow.document.close();
@@ -47,7 +44,10 @@ function PrintTest() {
   return (
     <div style={{ padding: '20px' }}>
       <h1 className="text-white">🛍️ Infinity Invoice Tester</h1>
-      <button onClick={handlePrint} className="text-white border p-1 px-2 rounded-lg border-green-400">
+      <button
+        onClick={handlePrint}
+        className="text-white border p-1 px-2 rounded-lg border-green-400"
+      >
         🖨️ Print Invoice
       </button>
     </div>
