@@ -15,6 +15,8 @@ import img1 from "../Assets/INVENTORY.jpg";
 import img2 from "../Assets/SUPPLY CHAIN STRATEGIES.jpg";
 import img3 from "../Assets/DIGITAL TRANSFORMATION.jpg";
 import { TbWorld } from "react-icons/tb";
+import { MdOutlineDateRange } from "react-icons/md";
+
 
 
 
@@ -350,7 +352,31 @@ making processes.</p>
         <p className='lg:text-3xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Book An Appointment</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
-    <p className='text-5xl font-bold flex flex-col justify-center items-center p-10'>FORM<br/><span className='text-2xl'>(Work In Progress)</span></p>
+    {/* <p className='text-5xl font-bold flex flex-col justify-center items-center p-10'>FORM<br/><span className='text-2xl'>(Work In Progress)</span></p> */}
+    <div className='py-6 lg:px-40 flex'>
+      <div className='bg-[#213c21] flex flex-col justify-center items-center gap-10 py-10 px-14 w-1/2'>
+      <MdOutlineDateRange className='text-[200px] text-[#dbbf70]'/>
+      <p className='text-white text-4xl font-bold'>Let's Talk</p>
+      <p className='text-white text-center'>Ready to explore your supply chain transformation?<br/>
+      Book a call with us.</p>
+      </div>
+      <div className='py-3 px-10'>
+      <p className='text-3xl font-bold pb-3 text-[#213c21]'>Request a Consultation</p>
+        <form className='flex flex-col gap-1'>
+          <p>Name</p>
+          <input placeholder='Your Name' type='name' className='border p-1 rounded-md px-2'/>
+          <p>Email</p>
+          <input placeholder='You@company.com' type='email' className='border p-1 rounded-md px-2'/>
+          <p>Mobile Number</p>
+          <input placeholder='Your Mobile Number' type='number' className='border p-1 rounded-md px-2'/>
+          <p>Company</p>
+          <input placeholder='Your Company' type='text' className='border p-1 rounded-md px-2'/>
+          <p>How can we help ?</p>
+          <textarea placeholder='Your Message' className='border p-1 rounded-md px-2'/>
+          <button className='bg-[#dbbf70] text-[#213c21] p-2 rounded-md'>Schedule Now</button>
+        </form>
+      </div>
+    </div>
    </div>
 
    {/* GLOBAL REACH */}
