@@ -354,7 +354,7 @@ making processes.</p>
     </div>
     {/* <p className='text-5xl font-bold flex flex-col justify-center items-center p-10'>FORM<br/><span className='text-2xl'>(Work In Progress)</span></p> */}
     <div className='py-6 lg:px-40 flex lg:flex-row flex-col'>
-      <div className='bg-[#213c21] flex flex-col justify-center items-center gap-10 py-10 px-14 w-1/2'>
+      <div className='bg-[#213c21] flex flex-col justify-center items-center lg:gap-10 gap-4 py-10 lg:px-14 px-5 lg:w-1/2'>
       <MdOutlineDateRange className='text-[200px] text-[#dbbf70]'/>
       <p className='text-white text-4xl font-bold'>Let's Talk</p>
       <p className='text-white text-center'>Ready to explore your supply chain transformation?<br/>
