@@ -47,8 +47,8 @@ function PrintTest() {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1 className="text-white">🛍️ Infinity Invoice Tester</h1>
-      <button onClick={handlePrint} className="text-white border p-1 px-2 rounded-lg border-green-400">
+      {/* <h1 className="text-white">🛍️ Infinity Invoice Tester</h1> */}
+      <button onClick={handlePrint} className="text-white p-1 px-2 rounded-lg border-white border-2 hover:scale-105">
         🖨️ Print Invoice
       </button>
     </div>
