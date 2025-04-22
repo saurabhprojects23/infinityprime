@@ -16,10 +16,17 @@ import img2 from "../Assets/SUPPLY CHAIN STRATEGIES.jpg";
 import img3 from "../Assets/DIGITAL TRANSFORMATION.jpg";
 import { TbWorld } from "react-icons/tb";
 import { MdOutlineDateRange } from "react-icons/md";
-import PrintButton from "../Pages/PrintTest.js"
+// import PrintButton from "../Pages/PrintTest.js"
 
 
 const LandingPage = () => {
+
+
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  };
+
+
   return (
     <div className='ovo-regular'>
         <div className='flex justify-between px-16 p-3 text-white bg-green-900 z-50 sticky top-0'>
@@ -28,12 +35,12 @@ const LandingPage = () => {
                 <p className='text-[#dbbf70] lg:text-2xl text-xl font-medium ovo-regular'>INFINITY PRIME</p>
             </div>
             <div className='lg:flex hidden gap-16 items-center'>
-            <p className='cursor-pointer'>Home</p>
-                <p className='cursor-pointer'>About</p>
-                <p className='cursor-pointer'>Services</p>
-                <p className='cursor-pointer'>Case Studies</p>
-                <p className='cursor-pointer'>Insights</p>
-                <button className='px-2 p-1 border border-white rounded-sm'>Book an Appointment</button>
+            <p className='cursor-pointer' onClick={() => scrollToSection('home')}>Home</p>
+                <p className='cursor-pointer' onClick={() => scrollToSection('about')}>About</p>
+                <p className='cursor-pointer' onClick={() => scrollToSection('services')}>Services</p>
+                <p className='cursor-pointer' onClick={() => scrollToSection('case')}>Case Studies</p>
+                <p className='cursor-pointer' onClick={() => scrollToSection('insights')}>Insights</p>
+                <button className='px-2 p-1 border border-white rounded-sm' onClick={() => scrollToSection('contact')}>Book an Appointment</button>
             </div>
         </div>
         <div className='relative'>
@@ -41,7 +48,7 @@ const LandingPage = () => {
     <img src={bg} alt='' className='w-full lg:h-[500px] md:h-[450px] h-[200px]'/>
   </div>
 
-  <div className='absolute top-0 left-0 w-full h-full bg-[#213c21] bg-opacity-65 flex flex-col justify-center items-center text-center px-4'>
+  <div id='home' className='absolute top-0 left-0 w-full h-full bg-[#213c21] bg-opacity-65 flex flex-col justify-center items-center text-center px-4'>
     <div className='max-w-2xl flex flex-col justify-center items-center '>
       <img src={logo} alt='' className='lg:h-24 md:h-20 h-16 pb-5'/>
       <p className='lg:text-5xl md:text-4xl text-3xl font-bold mb-4 text-[#dbbf70] ovo-regular'>INFINITY PRIME</p>
@@ -65,7 +72,7 @@ const LandingPage = () => {
 
 {/* ABOUT */}
 
-<div className='py-5'>
+<div className='py-5' id='about'>
     <div className='p-4'>
         <p className='lg:text-3xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>About Us</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
@@ -96,7 +103,7 @@ const LandingPage = () => {
 
 {/* CORE VALUES */}
 
-    <div className='bg-gray-100 pb-7'>
+    <div className='bg-gray-100 pb-7' id="corevalues">
     <div className='p-4 '>
         <p className='lg:text-3xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Core Values</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
@@ -149,7 +156,7 @@ const LandingPage = () => {
     {/* OUR SERVICES */}
 
     <div>
-    <div className='p-4 '>
+    <div className='p-4 ' id='services'>
         <p className='lg:text-3xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Our Services</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
@@ -172,9 +179,9 @@ const LandingPage = () => {
 </div>
     </div>
 
-    {/* What Customers say-- testimonial */}
+    {/* What Customers say-- testimonial */ }
 
-   <div className='bg-slate-100 pb-16'>
+   <div className='bg-slate-100 pb-16' id='review'>
    <div className='p-4 '>
         <p className='lg:text-3xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>What Our Clients Say</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
@@ -205,7 +212,7 @@ const LandingPage = () => {
 
    {/* LATEST INSIGHTS */}
 
-   <div className='pb-10'>
+   <div className='pb-10' id="insights">
    <div className='p-4 '>
         <p className='lg:text-3xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Latest Insights</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
@@ -266,7 +273,7 @@ making processes.</p>
 
    {/* Case Studies */}
 
-   <div className='pb-10 bg-[#213c21]'>
+   <div className='pb-10 bg-[#213c21]' id="case">
    <div className='p-4 '>
         <p className='lg:text-3xl text-2xl font-bold text-[#dbbf70] flex justify-self-center items-center pb-2 pt-3'>Case Studies</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
@@ -345,9 +352,9 @@ making processes.</p>
    {/* BOOK AN APPOINTMENT */}
 
    <div>
-   <div className='p-4 '>
+   <div className='p-4 ' id="contact">
         <p className='lg:text-3xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Book An Appointment</p>
-        <div className='flex justify-center items-center lg: pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
+        <div className='flex justify-center items-center lg:pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
     {/* <p className='text-5xl font-bold flex flex-col justify-center items-center p-10'>FORM<br/><span className='text-2xl'>(Work In Progress)</span></p> */}
     <div className='py-6 lg:px-40 px-4 flex lg:flex-row flex-col'>
