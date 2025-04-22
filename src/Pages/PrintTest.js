@@ -1,58 +1,44 @@
-import React from "react";
+// import React from "react";
 
-function PrintTest() {
-  const invoiceHTML = `
-    <html>
-      <head>
-        <title>Invoice</title>
-        <style>
-          body { font-family: sans-serif; padding: 20px; }
-          table { border-collapse: collapse; margin-top: 20px; width: 100%; }
-          table, th, td { border: 1px solid black; padding: 10px; }
-        </style>
-      </head>
-      <body>
-        <h2>🧾 Invoice</h2>
-        <p><strong>Order ID:</strong> #123456</p>
-        <p><strong>Customer:</strong> Rahul Sharma</p>
-        <p><strong>Date:</strong> April 17, 2025</p>
-        <table>
-          <thead>
-            <tr><th>Item</th><th>Qty</th><th>Price</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Tomatoes</td><td>2 Kg</td><td>₹40</td></tr>
-            <tr><td>Potatoes</td><td>1 Kg</td><td>₹20</td></tr>
-          </tbody>
-        </table>
-        <h3>Total: ₹60</h3>
-      </body>
-    </html>
-  `;
+// function PrintTest() {
+//   const invoiceHTML = `
+//     <div style="font-family: sans-serif; padding: 20px;">
+//       <h2>🧾 Invoice</h2>
+//       <p><strong>Order ID:</strong> #123456</p>
+//       <p><strong>Customer:</strong> Rahul Sharma</p>
+//       <p><strong>Date:</strong> April 17, 2025</p>
+//       <table border="1" cellPadding="10" cellSpacing="0" style="margin-top: 20px;">
+//         <thead>
+//           <tr><th>Item</th><th>Qty</th><th>Price</th></tr>
+//         </thead>
+//         <tbody>
+//           <tr><td>Tomatoes</td><td>2 Kg</td><td>₹40</td></tr>
+//           <tr><td>Potatoes</td><td>1 Kg</td><td>₹20</td></tr>
+//         </tbody>
+//       </table>
+//       <h3>Total: ₹60</h3>
+//     </div>
+//   `;
 
-  const handlePrint = () => {
-    console.log("🖱️ clicked print");
+//   const handlePrint = () => {
+//     if (window.electronAPI) {
+//       window.electronAPI.triggerPrint(invoiceHTML);
+//     } else {
+//       const printWindow = window.open('', '_blank');
+//       printWindow.document.write(invoiceHTML);
+//       printWindow.document.close();
+//       printWindow.print();
+//     }
+//   };
 
-    if (window.electronAPI && typeof window.electronAPI.triggerPrint === "function") {
-      console.log("📤 triggerPrint is a function");
-      window.electronAPI.triggerPrint(invoiceHTML);
-    } else {
-      console.warn("⚠️ window.electronAPI not available, fallback to window.print()");
-      const newWindow = window.open('', '_blank');
-      newWindow.document.write(invoiceHTML);
-      newWindow.document.close();
-      newWindow.print();
-    }
-  };
+//   return (
+//     <div className="App" style={{ padding: '20px' }}>
+//       <h1 className="text-white">🛍️ Infinity Invoice Tester</h1>
+//       <button onClick={handlePrint} className="text-white border p-1 px-2 rounded-lg border-green-400">
+//         🖨️ Print Invoice
+//       </button>
+//     </div>
+//   );
+// }
 
-  return (
-    <div style={{ padding: '20px' }}>
-      {/* <h1 className="text-white">🛍️ Infinity Invoice Tester</h1> */}
-      <button onClick={handlePrint} className="text-white p-1 px-2 rounded-lg border-white border-2 hover:scale-110 transition-all">
-        🖨️ Print Invoice
-      </button>
-    </div>
-  );
-}
-
-export default PrintTest;
+// export default PrintTest;

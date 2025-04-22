@@ -16,12 +16,7 @@ import img2 from "../Assets/SUPPLY CHAIN STRATEGIES.jpg";
 import img3 from "../Assets/DIGITAL TRANSFORMATION.jpg";
 import { TbWorld } from "react-icons/tb";
 import { MdOutlineDateRange } from "react-icons/md";
-import PrintTest from "../Pages/PrintTest.js"
-
-
-
-
-
+import PrintButton from "../Pages/PrintTest.js"
 
 
 const LandingPage = () => {
@@ -62,7 +57,7 @@ const LandingPage = () => {
       <button className='p-1 px-3 text-white rounded-md border border-white hover:scale-110 transition-all'>
         Contact Us
       </button>
-      <PrintTest/>
+                      {/* <PrintButton/> */}
      </div>
     </div>
   </div>
@@ -352,10 +347,10 @@ making processes.</p>
    <div>
    <div className='p-4 '>
         <p className='lg:text-3xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Book An Appointment</p>
-        <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
+        <div className='flex justify-center items-center lg: pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
     {/* <p className='text-5xl font-bold flex flex-col justify-center items-center p-10'>FORM<br/><span className='text-2xl'>(Work In Progress)</span></p> */}
-    <div className='py-6 lg:px-40 flex lg:flex-row flex-col'>
+    <div className='py-6 lg:px-40 px-4 flex lg:flex-row flex-col'>
       <div className='bg-[#213c21] flex flex-col justify-center items-center lg:gap-10 gap-4 py-10 lg:px-14 px-5 lg:w-1/2'>
       <MdOutlineDateRange className='text-[200px] text-[#dbbf70]'/>
       <p className='text-white text-4xl font-bold'>Let's Talk</p>
