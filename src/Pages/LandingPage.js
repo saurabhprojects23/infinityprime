@@ -417,9 +417,9 @@ making processes.</p>
     <div>
       <p className='text-sm text-gray-500 flex justify-self-center items-center py-5'>Trusted by 4,000+ companies</p>
       <div className='lg:flex grid grid-cols-3 lg:justify-around items-center pb-5'>
-        <div className='flex flex-col gap-2 text-lg font-semibold items-center'><img src={partner1} alt="" className='h-20 rounded-xl'/><p>Photon Softwares</p></div>
-        <div className='flex flex-col gap-2 text-lg font-semibold items-center'><img src={partner2} alt="" className='h-20 rounded-xl'/><p>Nathan Digital</p></div>
-        <div className='flex flex-col gap-2 text-lg font-semibold items-center'><img src={partner3} alt="" className='h-20 rounded-xl'/><p>Cross Culture Consulting</p></div>
+        <div className='flex flex-col gap-2 lg:text-lg text-sm font-semibold items-center'><img src={partner1} alt="" className='lg:h-20 h-10 rounded-xl'/><p>Photon Softwares</p></div>
+        <div className='flex flex-col gap-2 lg:text-lg text-sm font-semibold items-center'><img src={partner2} alt="" className='lg:h-20 h-10 rounded-xl'/><p>Nathan Digital</p></div>
+        <div className='flex flex-col gap-2 lg:text-lg text-sm font-semibold items-center'><img src={partner3} alt="" className='lg:h-20 h-10 rounded-xl'/><p>Cross Culture Consulting</p></div>
         {/* <img src="https://brandlogos.net/wp-content/uploads/2019/01/slack_2019-logo_brandlogos.net_vc8uu-300x300.png" alt="" className='h-28'/>
         <img src="https://brandlogos.net/wp-content/uploads/2022/10/dropbox-logo_brandlogos.net_mm6rr-300x300.png" alt="" className='h-28'/>
         <img src="https://brandlogos.net/wp-content/uploads/2022/10/webflow-logo_brandlogos.net_bsbdq-300x300.png" alt="" className='h-28'/> */}
