@@ -1,7 +1,6 @@
 import React from 'react'
 import logo from "../Assets/logo.png"
 import bg from "../Assets/bgpic.png"
-import rachid from "../Assets/rachidPic.png"
 import { GrShieldSecurity } from "react-icons/gr";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { IoBulbOutline } from "react-icons/io5";
@@ -11,12 +10,19 @@ import cards from "../Assets/data.js";
 import { FaAngleDown } from "react-icons/fa6";
 import testimonials from "../Assets/testimonialData.js"
 import { FaAngleRight } from "react-icons/fa6";
-import img1 from "../Assets/INVENTORY.jpg";
-import img2 from "../Assets/SUPPLY CHAIN STRATEGIES.jpg";
-import img3 from "../Assets/DIGITAL TRANSFORMATION.jpg";
 import { TbWorld } from "react-icons/tb";
 import { MdOutlineDateRange } from "react-icons/md";
 // import PrintButton from "../Pages/PrintTest.js"
+import insight1 from "../Assets/ESG Compliance- Building Sustainable Supply Chains.jpg"
+import insight2 from "../Assets/Supply Chain Resiliency in the Post-Pandemic Era.jpg"
+import insight3 from "../Assets/The Digital Supply Chain.jpg"
+import case1 from "../Assets/SUPPLY CHAIN STRATEGY.jpg"
+import case2 from "../Assets/Supply Chain Technology .jpg"
+import case3 from "../Assets/SUSTAINABILITY (1).jpg"
+import rachidpic from "../Assets/IMG_655723.jpg"
+import partner1 from "../Assets/photonLogo.png"
+import partner2 from "../Assets/ndLogo.jpeg"
+import partner3 from "../Assets/cccslogo.png"
 
 
 const LandingPage = () => {
@@ -58,10 +64,10 @@ const LandingPage = () => {
       </p>
       <p className='mb-6 text-white'>Supply Chain isn't your back-office, It's your battleground.</p>
      <div className='flex justify-center items-center gap-6 pt-3'>
-     <button className='p-1 px-3 text-green-950 bg-[#dbbf70] rounded-md font-semibold hover:scale-110 transition-all'>
+     <button onClick={() => scrollToSection('services')} className='p-1 px-3 text-green-950 bg-[#dbbf70] rounded-md font-semibold hover:scale-110 transition-all'>
         Our Services
       </button>
-      <button className='p-1 px-3 text-white rounded-md border border-white hover:scale-110 transition-all'>
+      <button onClick={() => scrollToSection('contact')} className='p-1 px-3 text-white rounded-md border border-white hover:scale-110 transition-all'>
         Contact Us
       </button>
                       {/* <PrintButton/> */}
@@ -80,7 +86,7 @@ const LandingPage = () => {
 
     <div className='flex lg:flex-row flex-col gap-7 lg:px-14 md:px-10 px-6'>
         <div className='flex flex-col gap-2 lg:w-1/2 justify-center items-center'>
-            <img src={rachid} alt="" className='h-36 shadow-xl rounded-full'/>
+            <img src={rachidpic} alt="" className='h-44 w-44 shadow-xl rounded-full'/>
             <p className='text-xl font-semibold text-[#213c21]'>Rachid Maliki</p>
             <p className='text-sm text-[#213c21]'>Founder and CEO</p>
         </div>
@@ -221,7 +227,7 @@ const LandingPage = () => {
 
     <div className="rounded-lg overflow-hidden shadow-xl bg-white h-96 hover:scale-105 transition-all">
       <div className="h-40 w-full overflow-hidden">
-        <img src={img1} alt="" className="w-full h-full object-cover" />
+        <img src={insight2} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
         <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Strategy</p></div>
@@ -237,7 +243,7 @@ volatility.</p>
 
     <div className="rounded-lg overflow-hidden shadow-xl bg-white h-96 hover:scale-105 transition-all">
       <div className="h-40 w-full overflow-hidden">
-        <img src={img3} alt="" className="w-full h-full object-cover" />
+        <img src={insight3} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
         <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Technology</p></div>
@@ -254,7 +260,7 @@ making processes.</p>
 
     <div className="rounded-lg overflow-hidden shadow-xl bg-white h-96 hover:scale-105 transition-all">
       <div className="h-40 w-full overflow-hidden">
-        <img src={img2} alt="" className="w-full h-full object-cover" />
+        <img src={insight1} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
         <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Sustainability</p></div>
@@ -282,7 +288,7 @@ making processes.</p>
 
     <div className="rounded-lg overflow-hidden shadow-xl bg-white hover:scale-105 transition-all">
       <div className="h-40 w-full overflow-hidden">
-        <img src={img1} alt="" className="w-full h-full object-cover" />
+        <img src={case1} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
         <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Strategy</p></div>
@@ -304,7 +310,7 @@ making processes.</p>
 
     <div className="rounded-lg overflow-hidden shadow-xl bg-white hover:scale-105 transition-all">
       <div className="h-40 w-full overflow-hidden">
-        <img src={img3} alt="" className="w-full h-full object-cover" />
+        <img src={case2} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
         <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Technology</p></div>
@@ -326,7 +332,7 @@ making processes.</p>
 
     <div className="rounded-lg overflow-hidden shadow-xl bg-white hover:scale-105 transition-all">
       <div className="h-40 w-full overflow-hidden">
-        <img src={img2} alt="" className="w-full h-full object-cover" />
+        <img src={case3} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
         <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Sustainability</p></div>
@@ -409,14 +415,14 @@ making processes.</p>
     {/* Partners LOGOS */}
 
     <div>
-      <p className='text-sm text-gray-500 flex justify-self-center items-center pt-5'>Trusted by 4,000+ companies</p>
-      <div className='lg:flex grid grid-cols-3 lg:justify-around items-center'>
-        <img src="https://brandlogos.net/wp-content/uploads/2021/10/coinbase-logo-300x300.png" alt="" className='h-28'/>
-        <img src="https://brandlogos.net/wp-content/uploads/2015/09/spotify-logo-vector-download-300x300.jpg" alt="" className='h-28'/>
-        <img src="https://brandlogos.net/wp-content/uploads/2020/09/zoom-logo-300x300.png" alt="" className='h-28'/>
-        <img src="https://brandlogos.net/wp-content/uploads/2019/01/slack_2019-logo_brandlogos.net_vc8uu-300x300.png" alt="" className='h-28'/>
+      <p className='text-sm text-gray-500 flex justify-self-center items-center py-5'>Trusted by 4,000+ companies</p>
+      <div className='lg:flex grid grid-cols-3 lg:justify-around items-center pb-5'>
+        <div className='flex flex-col gap-2 text-lg font-semibold items-center'><img src={partner1} alt="" className='h-20 rounded-xl'/><p>Photon Softwares</p></div>
+        <div className='flex flex-col gap-2 text-lg font-semibold items-center'><img src={partner2} alt="" className='h-20 rounded-xl'/><p>Nathan Digital</p></div>
+        <div className='flex flex-col gap-2 text-lg font-semibold items-center'><img src={partner3} alt="" className='h-20 rounded-xl'/><p>Cross Culture Consulting</p></div>
+        {/* <img src="https://brandlogos.net/wp-content/uploads/2019/01/slack_2019-logo_brandlogos.net_vc8uu-300x300.png" alt="" className='h-28'/>
         <img src="https://brandlogos.net/wp-content/uploads/2022/10/dropbox-logo_brandlogos.net_mm6rr-300x300.png" alt="" className='h-28'/>
-        <img src="https://brandlogos.net/wp-content/uploads/2022/10/webflow-logo_brandlogos.net_bsbdq-300x300.png" alt="" className='h-28'/>
+        <img src="https://brandlogos.net/wp-content/uploads/2022/10/webflow-logo_brandlogos.net_bsbdq-300x300.png" alt="" className='h-28'/> */}
       </div>
     </div>
 
