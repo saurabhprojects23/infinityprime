@@ -374,7 +374,7 @@ making processes.</p>
       <p className='text-3xl xl:text-4xl font-bold pb-3 text-[#213c21]'>Request a Consultation</p>
         <form className='flex flex-col gap-2'>
           <p>Name</p>
-          <input placeholder='Your Name' type='name' className='border p-1 rounded-md px-2 w-[500px] mb-1'/>
+          <input placeholder='Your Name' type='name' className='border p-1 rounded-md px-2 lg:w-[500px] mb-1'/>
           <p>Email</p>
           <input placeholder='You@company.com' type='email' className='border p-1 rounded-md px-2 mb-1'/>
           <p>Mobile Number</p>
