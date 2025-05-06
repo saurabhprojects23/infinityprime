@@ -45,7 +45,7 @@ const LandingPage = () => {
   return (
     <div className='ovo-regular'>
         <div className='flex justify-between lg:px-16 xl:px-24 p-3 lg:py-4 text-white bg-[#2e4e29] z-50 sticky top-0'>
-            <div className='flex justify-center items-center gap-3'>
+            <div className='flex justify-center items-center gap-3' onClick={() => scrollToSection('home')}>
                 <img src={logo} alt='' className='h-5' />
                 <p className='text-[#dbbf70] text-xl font-medium ovo-regular'>INFINITY PRIME</p>
             </div>
