@@ -35,12 +35,12 @@ const LandingPage = () => {
 
   return (
     <div className='ovo-regular'>
-        <div className='flex justify-between lg:px-16 xl:px-24 p-3 xl:py-6 text-white bg-[#2e4e29] z-50 sticky top-0'>
+        <div className='flex justify-between lg:px-16 xl:px-24 p-3 lg:py-4 text-white bg-[#2e4e29] z-50 sticky top-0'>
             <div className='flex justify-center items-center gap-3'>
-                <img src={logo} alt='' className='h-7' />
-                <p className='text-[#dbbf70] lg:text-2xl text-xl font-medium ovo-regular'>INFINITY PRIME</p>
+                <img src={logo} alt='' className='h-5' />
+                <p className='text-[#dbbf70] text-xl font-medium ovo-regular'>INFINITY PRIME</p>
             </div>
-            <div className='lg:flex hidden gap-16 lg:gap-20 xl:gap-24 items-center'>
+            <div className='lg:flex hidden gap-16 lg:gap-16 xl:gap-20 items-center'>
             <p className='cursor-pointer' onClick={() => scrollToSection('home')}>Home</p>
                 <p className='cursor-pointer' onClick={() => scrollToSection('about')}>About</p>
                 <p className='cursor-pointer' onClick={() => scrollToSection('services')}>Services</p>
@@ -50,8 +50,8 @@ const LandingPage = () => {
             </div>
         </div>
         <div className='relative'>
-  <div className='w-full h-[500px] xl:h-[700px] object-cover bg-[#213c21]  flex justify-center items-center' >
-    <img src={bg} alt='' className='w-full lg:h-[500px] xl:h-[700px] md:h-[450px] h-[200px]'/>
+  <div className='w-full h-[550px] object-cover bg-[#213c21]  flex justify-center items-center' >
+    <img src={bg} alt='' className='w-full lg:h-[550px] md:h-[450px] h-[200px]'/>
   </div>
 
   <div id='home' className='absolute top-0 left-0 w-full h-full bg-[#213c21] bg-opacity-65 flex flex-col justify-center items-center text-center px-4'>
@@ -59,15 +59,15 @@ const LandingPage = () => {
       <img src={logo} alt='' className='lg:h-24 md:h-20 h-16 pb-5 mb-5'/>
       <p className='lg:text-5xl xl:text-6xl 2xl:text-7xl md:text-4xl text-3xl font-bold mb-4 text-[#dbbf70] ovo-regular'>INFINITY PRIME</p>
       <div className='flex justify-center items-center pb-4'><div className='w-28 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
-      <p className='mb-6 text-white text-xl'>
+      <p className='mb-6 text-white text-xl font-sans'>
       “Excellence is never an accident; it is a result of high intention”
       </p>
       <p className='mb-6 text-white'>Supply Chain isn't your back-office, It's your battleground.</p>
-     <div className='flex justify-center items-center gap-6 pt-3 '>
-     <button onClick={() => scrollToSection('services')} className='p-1 px-3 xl:text-xl xl:px-4 xl:py-3  text-green-950 bg-[#dbbf70] rounded-md font-semibold hover:scale-110 transition-all'>
+     <div className='flex justify-center items-center gap-6 pt-8 '>
+     <button onClick={() => scrollToSection('services')} className='p-1 px-3 text-lg lg:px-3 lg:py-2  text-green-950 bg-[#dbbf70] rounded-md hover:scale-110 transition-all'>
         Our Services
       </button>
-      <button onClick={() => scrollToSection('contact')} className='p-1 px-3 xl:text-xl xl:px-4 xl:py-3 text-white rounded-md border border-white hover:scale-110 transition-all'>
+      <button onClick={() => scrollToSection('contact')} className='p-1 px-3 text-lg lg:px-3 lg:py-2 text-white rounded-md border border-white hover:scale-110 transition-all'>
         Contact Us
       </button>
                       {/* <PrintButton/> */}
@@ -78,17 +78,17 @@ const LandingPage = () => {
 
 {/* ABOUT */}
 
-<div className='py-5 xl:py-12' id='about'>
-    <div className='p-4'>
+<div className='py-5 xl:py-16' id='about'>
+    <div className='p-6'>
         <p className='lg:text-3xl xl:text-4xl 2xl:text-5xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>About Us</p>
-        <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
+        <div className='flex justify-center items-center pb-4'><div className='lg:w-20 md:w-16 w-12 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
 
     <div className='flex lg:flex-row flex-col gap-7 lg:px-14 md:px-10 px-6'>
         <div className='flex flex-col gap-2 lg:w-1/2 justify-center items-center'>
             <img src={rachidpic} alt="" className='border-[7px] border-[#dbbf70] h-44 w-44 xl:h-60 xl:w-60 shadow-2xl rounded-full'/>
-            <p className='text-xl xl:text-2xl font-semibold text-[#213c21]'>Rachid Maliki</p>
-            <p className='text-sm xl:text-xl text-[#213c21]'>Founder and CEO</p>
+            <p className='text-xl lg:text-3xl text-[#213c21] font-[600] pt-3'>Rachid Maliki</p>
+            <p className='text-sm lg:text-xl text-[#213c21] pt-1'>Founder and CEO</p>
         </div>
         <div className='flex lg:w-1/2 flex-col gap-2 lg:pr-24 text-center lg:text-start'>
             <p className='text-xl xl:text-2xl 2xl:text-3xl text-[#213c21]'>“We don't simply solve problems; we architect futures.”</p>
@@ -109,75 +109,75 @@ const LandingPage = () => {
 
 {/* CORE VALUES */}
 
-    <div className='bg-gray-100 pb-7 xl:pb-12' id="corevalues">
-    <div className='p-4 '>
-        <p className='lg:text-3xl xl:text-4xl 2xl:text-5xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Core Values</p>
-        <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
+    <div className='bg-slate-50 lg:py-10 lg:pb-16' id="corevalues">
+    <div className='p-4 pb-8 '>
+        <p className='lg:text-3xl xl:text-4xl 2xl:text-5xl text-2xl font-serif font-normal text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Core Values</p>
+        <div className='flex justify-center items-center pb-4'><div className='lg:w-20 md:w-16 w-12 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
 
     <div className='flex gap-3 justify-around items-center overflow-x-scroll hide-scrollbar lg:px-40 px-6'>
         <div className='text-center'>
             <div className='h-40 w-40 xl:h-48 xl:w-48 bg-[#dbbf70] shadow-md rounded-lg flex flex-col gap-2 justify-center items-center'>
-                <div className='text-3xl text-white'><AiOutlineSafetyCertificate/></div>
-                <p className='text-white text-base text-center font-medium px-6'>Strategic Excellence</p>
+                <div className='text-3xl lg:text-4xl text-white'><AiOutlineSafetyCertificate/></div>
+                <p className='text-white text-lg text-center font-sans font-semibold px-6'>Strategic Excellence</p>
             </div>
-            <p className='w-40 text-sm text-gray-800 pt-1'>Execute with precision. Think
-            ahead.</p>
+            <div className=' flex items-center justify-center text-center pt-2'><p className='w-40 text-sm text-gray-800 pt-1 font-sans'>Execute with precision. Think
+            ahead.</p></div>
         </div>
         <div className='text-center'>
             <div className='h-40 w-40 xl:h-48 xl:w-48 bg-[#213c21] shadow-md rounded-lg flex flex-col gap-2 justify-center items-center'>
-            <div className='text-3xl xl:text-4xl text-white'><GrShieldSecurity/></div>
-            <p className='text-white text-base text-center font-medium px-6'>Unwavering Integrity</p>
+            <div className='text-3xl lg:text-4xl text-white'><GrShieldSecurity/></div>
+            <p className='text-white text-lg text-center font-sans font-semibold px-6'>Unwavering Integrity</p>
             </div>
-            <p className='w-40 text-sm text-gray-800 pt-1'>Practice radical honesty. Be
-            transparent.</p>
+            <div className=' flex items-center justify-center text-center pt-2'><p className='w-40 text-sm text-gray-800 pt-1 font-sans'>Practice radical honesty. Be
+            transparent.</p></div>
         </div>
         <div className='text-center'>
             <div className='h-40 w-40 xl:h-48 xl:w-48 bg-[#dbbf70] shadow-md rounded-lg flex flex-col gap-2 justify-center items-center'>
-            <div className='text-3xl xl:text-4xl text-white'><IoBulbOutline/></div>
-            <p className='text-white text-base text-center font-medium px-6'>Boundless Innovation</p>
+            <div className='text-3xl lg:text-4xl text-white'><IoBulbOutline/></div>
+            <p className='text-white text-lg text-center font-sans font-semibold px-6'>Boundless Innovation</p>
             </div>
-            <p className='w-40 text-sm text-gray-800 pt-1'>Imagine boldly. Deliver
-            practically.</p>
+            <div className=' flex items-center justify-center text-center pt-2'><p className='w-40 text-sm text-gray-800 pt-1 font-sans'>Imagine boldly. Deliver
+            practically.</p></div>
         </div>
         <div className='text-center'>
             <div className='h-40 w-40 xl:h-48 xl:w-48 bg-[#213c21] shadow-md rounded-lg flex flex-col gap-2 justify-center items-center'>
-                <div className='text-3xl xl:text-4xl text-white'><RiTeamFill/></div>
-                <p className='text-white text-base text-center font-medium px-6'>Authentic Partnership</p>
+                <div className='text-3xl lg:text-4xl text-white'><RiTeamFill/></div>
+                <p className='text-white text-lg text-center font-sans font-semibold px-6'>Authentic Partnership</p>
             </div>
-            <p className='w-40 text-sm text-gray-800 pt-1'>Collaborate deeply. Solve
-            together.</p>
+            <div className=' flex items-center justify-center text-center pt-2'><p className='w-40 text-sm text-gray-800 pt-1 font-sans'>Collaborate deeply. Solve
+            together.</p></div>
         </div>
         <div className='text-center'>
             <div className='h-40 w-40 xl:h-48 xl:w-48 bg-[#dbbf70] shadow-md rounded-lg flex flex-col gap-2 justify-center items-center'>
-            <div className='text-3xl xl:text-4xl text-white'><BsRecycle/></div>
-            <p className='text-white text-base text-center font-medium px-6'>Sustainable Impact</p>
+            <div className='text-3xl lg:text-4xl text-white'><BsRecycle/></div>
+            <p className='text-white text-lg text-center font-sans font-semibold px-6'>Sustainable Impact</p>
             </div>
-            <p className='w-40 text-sm text-gray-800 pt-1'>Drive meaningful, lasting
-            value</p>
+            <div className=' flex items-center justify-center text-center pt-2'><p className='w-40 text-sm text-gray-800 pt-1 font-sans'>Drive meaningful, lasting
+            value</p></div>
         </div>
     </div>
     </div>
 
     {/* OUR SERVICES */}
 
-    <div>
-    <div className='p-4 ' id='services'>
-        <p className='lg:text-3xl xl:text-4xl 2xl:text-5xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-3 pt-3'>Our Services</p>
-        <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
+    <div className='py-10'>
+    <div className='p-6 ' id='services'>
+        <p className='lg:text-4xl text-2xl font-serif text-[#213c21] flex justify-self-center items-center pb-3 pt-3'>Our Services</p>
+        <div className='flex justify-center items-center pb-4'><div className='lg:w-20 md:w-16 w-12 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
 
-    <div className="grid grid-cols-2 lg:grid-cols-3 lg:gap-6 gap-3 lg:px-40 px-2 pb-6">
+    <div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 lg:gap-6 gap-3 lg:px-40 px-2 pb-6">
   {cards.map(card => (
     <div key={card.id} className="rounded-lg hover:scale-105 transition-all overflow-hidden shadow-xl bg-white">
       <div className="h-40 w-full overflow-hidden">
         <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
       </div>
-      <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
-        <h2 className="lg:text-lg text-base font-semibold mb-2">{card.title}</h2>
-        <p className="text-sm text-gray-600 mb-4">{card.description}</p>
-        <button className="mt-auto text-sm lg:text-base lg:px-4 py-1 hover:scale-105 border rounded-md bg-slate-200 transition flex justify-center items-center gap-1">
-          <p >Learn More</p> <span className=''><FaAngleDown/></span>
+      <div className="lg:p-6 p-2 flex flex-col font-sans text-[#213c21]">
+        <h2 className="lg:text-lg text-base font-bold mb-2 line-clamp-2 h-14">{card.title}</h2>
+        <p className="text-sm font-semibold mb-4 h-12 line-clamp-2">{card.description}</p>
+        <button className="mt-auto font-semibold text-sm lg:px-4 py-2 hover:scale-105 border rounded-md bg-slate-200 transition flex justify-center items-center gap-3">
+          <p >Learn more</p> <span className=''><FaAngleDown/></span>
         </button>
       </div>
     </div>
@@ -187,28 +187,28 @@ const LandingPage = () => {
 
     {/* What Customers say-- testimonial */ }
 
-   <div className='bg-slate-100 pb-16' id='review'>
-   <div className='p-4 '>
-        <p className='lg:text-3xl xl:text-4xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>What Our Clients Say</p>
+   <div className='bg-slate-50 pt-14 pb-20' id='review'>
+   <div className='pb-8 '>
+        <p className='lg:text-3xl xl:text-4xl text-2xl font-serif text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>What Our Clients Say</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 lg:px-40 px-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 lg:px-10 px-4">
         {testimonials.map((t) => (
-          <div key={t.id} className="bg-white rounded-lg shadow-md p-6 space-y-2">
-            <div className='flex flex-row gap-5 px-5'>
+          <div key={t.id} className="bg-white rounded-lg shadow-md p-5">
+            <div className='flex flex-row gap-5 h-16'>
             <img
               src={t.image}
               alt={t.name}
               className="w-14 h-14 rounded-full object-cover"
             />
             <div className='text-start'>
-              <h3 className="text-lg font-semibold">{t.name}</h3>
+              <h3 className="text-base font-sans font-semibold">{t.name}</h3>
               <p className="text-sm text-gray-500">{t.position}</p>
             </div>
-            </div>
-            <p className="text-sm text-gray-700 italic">“{t.feedback}”</p>
-            <div className="flex justify-start text-yellow-500 text-lg">
+            </div >
+            <p className="text-sm text-gray-700 italic h-16 font-sans font-semibold">“{t.feedback}”</p>
+            <div className="flex justify-start text-[#dbbf70] text-lg">
               {"★".repeat(t.stars)}
             </div>
           </div>
@@ -218,24 +218,24 @@ const LandingPage = () => {
 
    {/* LATEST INSIGHTS */}
 
-   <div className='pb-10' id="insights">
-   <div className='p-4 '>
+   <div className='pb-14 pt-10' id="insights">
+   <div className='pb-8 '>
         <p className='lg:text-3xl xl:text-4xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Latest Insights</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
-    <div className='grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-5 lg:px-40 px-4'>
+    <div className='grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-5 lg:px-20 2xl:px-40 px-4'>
 
     <div className="rounded-lg overflow-hidden shadow-xl bg-white h-96 hover:scale-105 transition-all">
       <div className="h-40 w-full overflow-hidden">
         <img src={insight2} alt="" className="w-full h-full object-cover" />
       </div>
-      <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Strategy</p></div>
-        <h2 className="lg:text-lg text-sm font-semibold mb-1 line-clamp-2">Supply Chain Resiliency in the Post-Pandemic Era</h2>
-        <p className="text-sm text-gray-600 mb-2 line-clamp-3">Explore strategies for building robust supply chains
+      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
+        <div className='flex pb-2 '><p className='text-[10px] p-[2px] border border-[#213c21] rounded-full px-4'>Strategy</p></div>
+        <h2 className=" text-sm font-bold mb-1 line-clamp-2 h-10">Supply Chain Resiliency in the Post-Pandemic Era</h2>
+        <p className="text-sm mb-2 line-clamp-3 h-16">Explore strategies for building robust supply chains
 that can withstand global disruptions and market
 volatility.</p>
-        <button className="text-sm lg:text-base font-medium transition flex justify-start items-center gap-3">
+        <button className="text-sm font-bold transition flex justify-start items-center gap-3">
           <p >Read article</p> <span className=''><FaAngleRight/></span>
         </button>
       </div>
@@ -245,14 +245,14 @@ volatility.</p>
       <div className="h-40 w-full overflow-hidden">
         <img src={insight3} alt="" className="w-full h-full object-cover" />
       </div>
-      <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Technology</p></div>
-        <h2 className="lg:text-lg text-sm font-semibold mb-1 line-clamp-2">The Digital Supply Chain: Leveraging AI and
+      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
+        <div className='flex pb-2'><p className='text-[10px] p-[2px] border border-[#213c21] rounded-full px-4'>Technology</p></div>
+        <h2 className="text-sm font-bold mb-1 line-clamp-2 h-10">The Digital Supply Chain: Leveraging AI and
         Machine Learning</h2>
-        <p className="text-sm text-gray-600 mb-2 line-clamp-3">How advanced technologies are transforming
+        <p className="text-sm mb-2 line-clamp-3 h-16">How advanced technologies are transforming
 forecasting, inventory management, and decision
 making processes.</p>
-        <button className="text-sm lg:text-base font-medium transition flex justify-start items-center gap-3">
+        <button className="text-sm font-bold transition flex justify-start items-center gap-3">
           <p >Read article</p> <span className=''><FaAngleRight/></span>
         </button>
       </div>
@@ -262,12 +262,12 @@ making processes.</p>
       <div className="h-40 w-full overflow-hidden">
         <img src={insight1} alt="" className="w-full h-full object-cover" />
       </div>
-      <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Sustainability</p></div>
-        <h2 className="lg:text-lg text-sm font-semibold mb-1 line-clamp-2">ESG Compliance: Building Sustainable Supply
+      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
+        <div className='flex pb-2'><p className='text-[10px] p-[2px] border border-[#213c21] rounded-full px-4'>Sustainability</p></div>
+        <h2 className="text-sm font-bold mb-1 line-clamp-2 h-10">ESG Compliance: Building Sustainable Supply
         Chains</h2>
-        <p className="text-sm text-gray-600 mb-2 line-clamp-3">Practical approaches to integrating environmental, social, and governance principles into supply chain operations.</p>
-        <button className="text-sm lg:text-base font-medium transition flex justify-start items-center gap-3">
+        <p className="text-sm mb-2 line-clamp-3 h-16">Practical approaches to integrating environmental, social, and governance principles into supply chain operations.</p>
+        <button className="text-sm font-bold transition flex justify-start items-center gap-3">
           <p >Read article</p> <span className=''><FaAngleRight/></span>
         </button>
       </div>
@@ -279,22 +279,22 @@ making processes.</p>
 
    {/* Case Studies */}
 
-   <div className='pb-10 bg-[#213c21]' id="case">
-   <div className='p-4 '>
-        <p className='lg:text-3xl xl:text-4xl text-2xl font-bold text-[#dbbf70] flex justify-self-center items-center pb-2 pt-3'>Case Studies</p>
+   <div className='pb-16 pt-10 bg-[#213c21]' id="case">
+   <div className='pb-6 '>
+        <p className='lg:text-3xl xl:text-4xl text-2xl font-serif text-[#dbbf70] flex justify-self-center items-center pb-2 pt-3'>Case Studies</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
-    <div className='grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-5 lg:px-40 px-4'>
+    <div className='grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-5 lg:px-20 2xl:px-40 px-4'>
 
     <div className="rounded-lg overflow-hidden shadow-xl bg-white hover:scale-105 transition-all">
       <div className="h-40 w-full overflow-hidden">
         <img src={case1} alt="" className="w-full h-full object-cover" />
       </div>
-      <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Strategy</p></div>
-        <h2 className="lg:text-lg text-sm font-semibold mb-1 line-clamp-2">Global Retailer Supply Chain
+      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#2e4e29]">
+        <div className='flex pb-2'><p className='text-[11px] p-[2px] bg-slate-100 rounded-full px-4 font-serif'>Retail</p></div>
+        <h2 className="text-lg font-bold mb-1 font-sans line-clamp-2">Global Retailer Supply Chain
         Transformation</h2>
-        <p className="text-sm text-gray-600 line-clamp-3 h-14">22% operational cost reduction through strategic
+        <p className="text-sm line-clamp-3 h-14">22% operational cost reduction through strategic
         network redesign and process optimization</p>
               <p className='text-xs text-black py-2'>
                       Key Results:<br/>
@@ -302,7 +302,7 @@ making processes.</p>
                       &nbsp; &nbsp; ◉ 98.7% on time deliver<br/>
                       &nbsp; &nbsp; ◉ 15% inventory reduction
               </p>
-        <button className="text-sm pb-2 lg:text-base font-medium transition flex justify-start items-center gap-3">
+        <button className="text-sm pb-2 font-bold transition flex justify-start items-center gap-3">
           <p >View full case study</p> <span className=''><FaAngleRight/></span>
         </button>
       </div>
@@ -312,11 +312,11 @@ making processes.</p>
       <div className="h-40 w-full overflow-hidden">
         <img src={case2} alt="" className="w-full h-full object-cover" />
       </div>
-      <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Technology</p></div>
-        <h2 className="lg:text-lg text-sm font-semibold mb-1 line-clamp-2">Pharmaceutical Manufacturer s Digital
+      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
+        <div className='flex pb-2'><p className='text-[11px] p-[2px] bg-slate-100 rounded-full px-4 font-serif'>Healthcare</p></div>
+        <h2 className="text-lg font-bold mb-1 font-sans line-clamp-2">Pharmaceutical Manufacturer s Digital
         Transformation</h2>
-        <p className="text-sm text-gray-600 line-clamp-3 h-14">End to end visibility implementation reducing
+        <p className="text-sm line-clamp-3 h-14">End to end visibility implementation reducing
         order to delivery time by 35%</p>
 <p className='text-xs text-black py-2'>
                       Key Results:<br/>
@@ -324,7 +324,7 @@ making processes.</p>
                       &nbsp; &nbsp; ◉ 99.9% product traceability<br/>
                       &nbsp; &nbsp; ◉ $4.2M annual savings
               </p>
-        <button className="text-sm pb-2 lg:text-base font-medium transition flex justify-start items-center gap-3">
+        <button className="text-sm pb-2 font-bold transition flex justify-start items-center gap-3">
           <p >View full case study</p> <span className=''><FaAngleRight/></span>
         </button>
       </div>
@@ -334,11 +334,11 @@ making processes.</p>
       <div className="h-40 w-full overflow-hidden">
         <img src={case3} alt="" className="w-full h-full object-cover" />
       </div>
-      <div className="lg:p-4 p-2 flex flex-col font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-xs p-1 border border-[#213c21] rounded-full px-4'>Sustainability</p></div>
-        <h2 className="lg:text-lg text-sm font-semibold mb-1 line-clamp-2">Automotive Supplier s Sustainable Supply
+      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
+        <div className='flex pb-2'><p className='text-[11px] p-[2px] bg-slate-100 rounded-full px-4 font-serif'>Automotive</p></div>
+        <h2 className="text-lg font-bold mb-1 font-sans line-clamp-2">Automotive Supplier s Sustainable Supply
         Chain</h2>
-        <p className="text-sm text-gray-600 line-clamp-3 h-14">Implementing ESG principles while improving
+        <p className="text-sm line-clamp-3 h-14">Implementing ESG principles while improving
         operational efficiency and supplier relationships</p>
         <p className='text-xs text-black py-2'>
                       Key Results:<br/>
@@ -346,7 +346,7 @@ making processes.</p>
                       &nbsp; &nbsp; ◉ 28% supplier ontime improvement<br/>
                       &nbsp; &nbsp; ◉ 18% total cost reduction
               </p>
-          <button className="text-sm pb-2 lg:text-base font-medium transition flex justify-start items-center gap-3">
+          <button className="text-sm pb-2 font-bold transition flex justify-start items-center gap-3">
           <p >View full case study</p> <span className=''><FaAngleRight/></span>
         </button>
       </div>
@@ -357,9 +357,9 @@ making processes.</p>
 
    {/* BOOK AN APPOINTMENT */}
 
-   <div className='pb-10 pt-5 bg-slate-100'>
-   <div className='p-4 ' id="contact">
-        <p className='lg:text-3xl xl:text-4xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Book An Appointment</p>
+   <div className='pb-16 pt-10 bg-slate-50'>
+   <div className='p-6' id="contact">
+        <p className='lg:text-4xl text-2xl font-medium text-[#213c21] font-serif flex justify-self-center items-center pb-2 pt-3'>Book An Appointment</p>
         <div className='flex justify-center items-center lg:pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
     {/* <p className='text-5xl font-bold flex flex-col justify-center items-center p-10'>FORM<br/><span className='text-2xl'>(Work In Progress)</span></p> */}
@@ -370,19 +370,19 @@ making processes.</p>
       <p className='text-white text-center'>Ready to explore your supply chain transformation?<br/>
       Book a call with us.</p>
       </div>
-      <div className='py-3 px-10'>
-      <p className='text-3xl xl:text-4xl font-bold pb-3 text-[#213c21]'>Request a Consultation</p>
-        <form className='flex flex-col gap-2'>
+      <div className='py-3 px-10 lg:w-1/2'>
+      <p className='text-2xl font-[500 pb-3 font-serif text-[#213c21] w-full'>Request a Consultation</p>
+        <form className='flex flex-col gap-2 font-sans'>
           <p>Name</p>
-          <input placeholder='Your Name' type='name' className='border p-1 rounded-md px-2 lg:w-[500px] mb-1'/>
+          <input placeholder='Your Name' type='name' className='border p-1 rounded-md px-2 mb-1 shadow-sm'/>
           <p>Email</p>
-          <input placeholder='You@company.com' type='email' className='border p-1 rounded-md px-2 mb-1'/>
+          <input placeholder='You@company.com' type='email' className='border p-1 rounded-md px-2 mb-1 shadow-sm'/>
           <p>Mobile Number</p>
-          <input placeholder='Your Mobile Number' type='number' className='border p-1 rounded-md px-2 mb-1'/>
+          <input placeholder='Your Mobile Number' type='number' className='border p-1 rounded-md px-2 mb-1 shadow-sm'/>
           <p>Company</p>
-          <input placeholder='Your Company' type='text' className='border p-1 rounded-md px-2 mb-1'/>
+          <input placeholder='Your Company' type='text' className='border p-1 rounded-md px-2 mb-1 shadow-sm'/>
           <p>How can we help ?</p>
-          <textarea placeholder='Your Message' rows="5" className='border p-1 rounded-md px-2'/>
+          <textarea placeholder='Your Message' rows="5" className='border p-1 rounded-md px-2 shadow-sm'/>
           <button className='bg-[#dbbf70] text-[#213c21] p-3 rounded-md mt-2'>Schedule Now</button>
         </form>
       </div>
@@ -391,8 +391,8 @@ making processes.</p>
 
    {/* GLOBAL REACH */}
 
-   <div className='pb-10 bg-[#213c21]'>
-   <div className='p-4 '>
+   <div className='pb-16 pt-10 bg-[#213c21]'>
+   <div className='pb-6 '>
         <p className='lg:text-3xl xl:text-4xl text-2xl font-bold text-[#dbbf70] flex justify-self-center items-center pb-2 pt-3'>Global Reach</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
