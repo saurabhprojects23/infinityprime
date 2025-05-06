@@ -21,16 +21,25 @@ import case2 from "../Assets/Supply Chain Technology .jpg"
 import case3 from "../Assets/SUSTAINABILITY (1).jpg"
 import rachidpic from "../Assets/IMG_655723.jpg"
 import partner1 from "../Assets/photonLogo.png"
-import partner2 from "../Assets/ndLogo.jpeg"
+import partner2 from "../Assets/nathanlogo.jpeg"
 import partner3 from "../Assets/cccslogo.png"
 
 
 const LandingPage = () => {
 
 
+  // const scrollToSection = (id) => {
+  //   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  // };
+
   const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  };
+  const section = document.getElementById(id);
+  if (section) {
+    const yOffset = -60; // Adjust this based on your fixed header height
+    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
 
 
   return (
@@ -40,7 +49,7 @@ const LandingPage = () => {
                 <img src={logo} alt='' className='h-5' />
                 <p className='text-[#dbbf70] text-xl font-medium ovo-regular'>INFINITY PRIME</p>
             </div>
-            <div className='lg:flex hidden gap-16 lg:gap-16 xl:gap-20 items-center'>
+            <div className='lg:flex hidden lg:gap-16 items-center'>
             <p className='cursor-pointer' onClick={() => scrollToSection('home')}>Home</p>
                 <p className='cursor-pointer' onClick={() => scrollToSection('about')}>About</p>
                 <p className='cursor-pointer' onClick={() => scrollToSection('services')}>Services</p>
@@ -416,10 +425,10 @@ making processes.</p>
 
     <div className='py-10'>
       <p className='text-base text-gray-500 flex justify-self-center items-center py-5'>Trusted by Companies</p>
-      <div className='lg:flex grid grid-cols-3 lg:justify-between items-center pb-5 lg:px-40 text-gray-700'>
-        <div className='flex flex-col gap-2 lg:text-2xl text-sm font-semibold items-center'><img src={partner1} alt="" className='lg:h-16 h-10 rounded-xl'/><p>Photon Softwares</p></div>
-        <div className='flex flex-col gap-2 lg:text-2xl text-sm font-semibold items-center lg:pl-20'><img src={partner2} alt="" className='lg:h-14 h-10 rounded-xl'/><p>Nathan Digital</p></div>
-        <div className='flex flex-col gap-2 lg:text-2xl text-sm font-semibold items-center'><img src={partner3} alt="" className='lg:h-14 h-10 rounded-xl'/><p>Cross Culture Consulting</p></div>
+      <div className='lg:flex grid grid-cols-3 lg:justify-between items-center pb-5 lg:px-40 font-serif text-gray-800'>
+        <div className='flex flex-col gap-2 lg:text-xl text-sm items-center'><img src={partner1} alt="" className='lg:h-16 h-10 rounded-xl'/><p>Photon Softwares</p></div>
+        <div className='flex flex-col gap-2 lg:text-xl text-sm items-center lg:pl-20'><img src={partner2} alt="" className='lg:h-16 h-10'/><p>Nathan Digital</p></div>
+        <div className='flex flex-col gap-2 lg:text-xl text-sm items-center'><img src={partner3} alt="" className='lg:h-14 h-10 rounded-xl'/><p>Cross Culture Consulting</p></div>
       </div>
     </div>
 
