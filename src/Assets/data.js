@@ -16,75 +16,87 @@ import img12 from "../Assets/TALENT.jpg";
 const cards = [
   {
     id: 1,
-    title: "Supply Chain Strategy & Transformation",
-    description: 'Align supply chains with business goals for strategic advantage.',
+    title: "Supply Chain strategy and transformation",
+    description: 'Align, Innovate, and Outperform your Industry ',
     image: img1,
+    link: "/service1"
   },
   {
     id: 2,
-    title: "Network Design & Optimization",
-    description: 'Optimize facility locations and inventory flows for efficiency.',
+    title: "Network Design",
+    description: 'Model, Optimize, and Future-proof your Network',
     image: img2,
+    link: "/service2"
   },
   {
     id: 3,
-    title: "Strategic Sourcing & Procurement",
-    description: 'Develop category strategies and supplier relationship models.',
+    title: "Strategic Sourcing and Procurement",
+    description: 'Source, Negotiate, and Collaborate Strategically',
     image: img3,
+    link: "/service3"
   },
   {
     id: 4,
-    title: "Compliance, Risk & Due Diligence",
-    description: 'Comprehensive risk management and regulatory compliance.',
+    title: "Compliance Risk and Due diligence ",
+    description: 'Identify, Mitigate, and Manage Risks Strategically',
     image: img4,
+    link: "/service4"
   },
   {
     id: 5,
-    title: "Inventory Management & Planning",
-    description: 'Improve demand planning and inventory optimization.',
+    title: "Inventory Management",
+    description: 'Balance, Synchronize, and Leverage your Inventory',
     image: img5,
+    link: "/service5"
   },
   {
     id: 6,
-    title: "Warehouse Design & Operations",
-    description: 'Design optimal warehouse layouts and material flow systems.',
+    title: "Warehouse Design",
+    description: 'Design, Optimize, and Future-proof your Facilities',
     image: img6,
+    link: "/service6"
   },
   {
     id: 7,
     title: "Sustainability & ESG Solutions",
-    description: 'Build sustainable supply chains aligned with ESG goals.',
+    description: 'Measure, Improve, and Showcase your Sustainability ',
     image: img7,
+    link: "/service7"
   },
   {
     id: 8,
-    title: "Logistics & Transportation",
-    description: 'Optimize route planning, mode selection, and carrier management.',
+    title: "Logistic and Transportaion",
+    description: 'Plan, Execute, and Control your transportation Efficiently ',
     image: img8,
+    link: "/service8"
   },
   {
     id: 9,
     title: "Digital Transformation & Technology",
-    description: 'Integrate advanced tech solutions for supply chain excellence.',
+    description: 'Strategize, Implement, and Optimize your Technology Ecosystem',
     image: img9,
+    link: "/service9"
   },
   {
     id: 10,
     title: "Advanced Manufacturing Excellence",
-    description: 'Apply Lean, Six Sigma, and Industry 4.0 principles.',
+    description: 'Streamline, Improve, and Innovate your Production systems',
     image: img10,
+    link: "/service10"
   },
   {
     id: 11,
     title: "Quality Management & Improvement",
-    description: 'Implement quality systems aligned with international standards.',
+    description: 'Measure, Analyse, and Continuously Enhance Quality ',
     image: img11,
+    link: "/service11"
   },
   {
     id: 12,
     title: "Supply Chain Talent Development",
-    description: 'Develop world class supply chain teams through training.',
+    description: 'Assess, Enhance, and Empower your Supply Chain Team.',
     image: img12,
+    link: "/service12"
   }
 ];
 

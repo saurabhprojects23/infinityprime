@@ -23,6 +23,9 @@ import rachidpic from "../Assets/IMG_655723.jpg"
 import partner1 from "../Assets/photonLogo.png"
 import partner2 from "../Assets/nathanlogo.jpeg"
 import partner3 from "../Assets/cccslogo.png"
+import partner4 from "../Assets/yumarilogo.jpeg"
+import { Link } from 'react-router-dom';
+import {FaWhatsappSquare} from "react-icons/fa"
 
 
 const LandingPage = () => {
@@ -39,6 +42,13 @@ const LandingPage = () => {
     const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
+};
+
+const openWhatsApp = () => {
+  const phone = '+971507239458'; // your phone number with country code
+  const message = 'Hello, I want to know more about your services';
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
 };
 
 
@@ -59,8 +69,8 @@ const LandingPage = () => {
             </div>
         </div>
         <div className='relative'>
-  <div className='w-full h-[550px] object-cover bg-[#213c21]  flex justify-center items-center' >
-    <img src={bg} alt='' className='w-full lg:h-[550px] md:h-[450px] h-[200px]'/>
+  <div className='w-full h-[600px] object-cover bg-[#213c21]  flex justify-center items-center' >
+    <img src={bg} alt='' className='w-full lg:h-[600px] md:h-[450px] h-[200px]'/>
   </div>
 
   <div id='home' className='absolute top-0 left-0 w-full h-full bg-[#213c21] bg-opacity-65 flex flex-col justify-center items-center text-center px-4'>
@@ -68,26 +78,28 @@ const LandingPage = () => {
       <img src={logo} alt='' className='lg:h-24 md:h-20 h-16 pb-5 mb-5'/>
       <p className='lg:text-5xl xl:text-6xl 2xl:text-7xl md:text-4xl text-3xl font-bold mb-4 text-[#dbbf70] ovo-regular'>INFINITY PRIME</p>
       <div className='flex justify-center items-center pb-4'><div className='w-28 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
-      <p className='mb-6 text-white text-xl font-sans'>
-      “Excellence is never an accident; it is a result of high intention”
+      <p className='mb-6 mt-5 text-white text-xl font-serif'>
+      “We rewrite the rules of supply chain strategy -- <br/> because great Brands don't gamble with Excellence”
       </p>
-      <p className='mb-6 text-white'>Supply Chain isn't your back-office, It's your battleground.</p>
-     <div className='flex justify-center items-center gap-6 pt-8 '>
+      
+     {/* <div className='flex justify-center items-center gap-6 pt-8 '>
      <button onClick={() => scrollToSection('services')} className='p-1 px-3 text-lg lg:px-3 lg:py-2  text-green-950 bg-[#dbbf70] rounded-md hover:scale-110 transition-all'>
         Our Services
       </button>
       <button onClick={() => scrollToSection('contact')} className='p-1 px-3 text-lg lg:px-3 lg:py-2 text-white rounded-md border border-white hover:scale-110 transition-all'>
         Contact Us
       </button>
-                      {/* <PrintButton/> */}
-     </div>
+     </div> */}
+     <p className='mb-6 mt-10 p-1 px-3 font-serif text-base rounded-md lg:px-3 lg:py-2  text-green-950 bg-[#dbbf70]'>
+      We shoulder your Supply Chain Challenges so you can confidently <br/>make-and-keep Bold Promises to Everyone who matters to your Business
+      </p>
     </div>
   </div>
 </div>
 
 {/* ABOUT */}
 
-<div className='py-5 xl:py-16' id='about'>
+<div className='py-5 xl:pt-16 pb-20' id='about'>
     <div className='p-6'>
         <p className='lg:text-3xl xl:text-4xl 2xl:text-5xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>About Us</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-20 md:w-16 w-12 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
@@ -95,7 +107,7 @@ const LandingPage = () => {
 
     <div className='flex lg:flex-row flex-col gap-7 lg:px-14 md:px-10 px-6'>
         <div className='flex flex-col gap-2 lg:w-1/2 justify-center items-center'>
-            <img src={rachidpic} alt="" className='border-[7px] border-[#dbbf70] h-44 w-44 xl:h-60 xl:w-60 shadow-2xl rounded-full'/>
+            <img src={rachidpic} alt="" className='h-44 lg:h-64 shadow-2xl rounded-full'/>
             <p className='text-xl lg:text-3xl text-[#213c21] font-[600] pt-3'>Rachid Maliki</p>
             <p className='text-sm lg:text-xl text-[#213c21] pt-1'>Founder and CEO</p>
         </div>
@@ -118,8 +130,8 @@ const LandingPage = () => {
 
 {/* CORE VALUES */}
 
-    <div className='bg-slate-50 lg:py-10 lg:pb-16' id="corevalues">
-    <div className='p-4 pb-8 '>
+    <div className='bg-slate-50 lg:py-12 lg:pb-20' id="corevalues">
+    <div className='p-4 pb-10 '>
         <p className='lg:text-3xl xl:text-4xl 2xl:text-5xl text-2xl font-serif font-normal text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Core Values</p>
         <div className='flex justify-center items-center pb-4'><div className='lg:w-20 md:w-16 w-12 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
     </div>
@@ -185,9 +197,9 @@ const LandingPage = () => {
       <div className="lg:p-6 p-2 flex flex-col font-sans text-[#213c21]">
         <h2 className="lg:text-lg text-base font-bold mb-2 line-clamp-2 h-14">{card.title}</h2>
         <p className="text-sm font-semibold mb-4 h-12 line-clamp-2">{card.description}</p>
-        <button className="mt-auto font-semibold text-sm lg:px-4 py-2 hover:scale-105 border rounded-md bg-slate-200 transition flex justify-center items-center gap-3">
+        <Link to={card.link}  className="mt-auto font-semibold text-sm lg:px-4 py-2 hover:scale-105 border rounded-md bg-slate-200 transition flex justify-center items-center gap-3">
           <p >Learn more</p> <span className=''><FaAngleDown/></span>
-        </button>
+        </Link>
       </div>
     </div>
   ))}
@@ -209,14 +221,14 @@ const LandingPage = () => {
             <img
               src={t.image}
               alt={t.name}
-              className="w-14 h-14 rounded-full object-cover"
+              className="w-14 lg:h-14 rounded-full object-cover"
             />
             <div className='text-start'>
               <h3 className="text-base font-sans font-semibold">{t.name}</h3>
               <p className="text-sm text-gray-500">{t.position}</p>
             </div>
             </div >
-            <p className="text-sm text-gray-700 italic h-16 font-sans font-semibold">“{t.feedback}”</p>
+            <p className="text-sm text-gray-700 italic lg:h-16 font-sans font-semibold">“{t.feedback}”</p>
             <div className="flex justify-start text-[#dbbf70] text-lg">
               {"★".repeat(t.stars)}
             </div>
@@ -373,11 +385,16 @@ making processes.</p>
     </div>
     {/* <p className='text-5xl font-bold flex flex-col justify-center items-center p-10'>FORM<br/><span className='text-2xl'>(Work In Progress)</span></p> */}
     <div className='py-6 shadow-xl bg-white rounded-md lg:mx-40 lg:p-10 px-4 flex lg:flex-row flex-col'>
-      <div className='bg-[#213c21] flex flex-col justify-center items-center lg:gap-10 gap-4 py-10 lg:px-14 px-5 lg:w-1/2'>
+      <div className='bg-[#213c21] flex flex-col justify-center items-center lg:gap-6 gap-4 py-10 lg:px-14 px-5 lg:w-1/2'>
       <MdOutlineDateRange className='text-[200px] text-[#dbbf70]'/>
       <p className='text-white text-4xl font-bold'>Let's Talk</p>
-      <p className='text-white text-center'>Ready to explore your supply chain transformation?<br/>
-      Book a call with us.</p>
+      <div className='text-white text-lg flex flex-col gap-1'>
+      <p>Email: r_maliki@yahoo.fr</p>
+      <p>Mobile: +97150723945</p>
+      <p onClick={openWhatsApp} className='flex items-center gap-2'>Chat with Us on Whatsapp <FaWhatsappSquare className='text-[#dbbf70] text-4xl cursor-pointer'/></p>
+      </div>
+      <p className='text-white text-center'>Ready to transform your Supply Chain form Operational Burdens
+      to Promise keeping Engines? <br/>Book a call with us</p>
       </div>
       <div className='py-3 px-10 lg:w-1/2'>
       <p className='text-2xl font-[500 pb-3 font-serif text-[#213c21] w-full'>Request a Consultation</p>
@@ -425,22 +442,25 @@ making processes.</p>
 
     <div className='py-10'>
       <p className='text-base text-gray-500 flex justify-self-center items-center py-5'>Trusted by Companies</p>
-      <div className='lg:flex grid grid-cols-3 lg:justify-between items-center pb-5 lg:px-40 font-serif text-gray-800'>
-        <div className='flex flex-col gap-2 lg:text-xl text-sm items-center'><img src={partner1} alt="" className='lg:h-16 h-10 rounded-xl'/><p>Photon Softwares</p></div>
-        <div className='flex flex-col gap-2 lg:text-xl text-sm items-center lg:pl-20'><img src={partner2} alt="" className='lg:h-16 h-10'/><p>Nathan Digital</p></div>
+      <div className='lg:flex grid lg:grid-cols-4 grid-cols-2 lg:justify-between items-center pb-5 lg:px-40 font-serif text-gray-800'>
+        <div className='flex flex-col gap-2 lg:text-xl text-sm items-center'><img src={partner1} alt="" className='lg:h-16 h-10 rounded-lg'/><p>Photon Softwares</p></div>
+        <div className='flex flex-col gap-2 lg:text-xl text-sm items-center lg:pl-14'><img src={partner2} alt="" className='lg:h-16 h-10'/><p>Nathan Digital</p></div>
         <div className='flex flex-col gap-2 lg:text-xl text-sm items-center'><img src={partner3} alt="" className='lg:h-14 h-10 rounded-xl'/><p>Cross Culture Consulting</p></div>
+        <div className='flex flex-col gap-2 lg:text-xl text-sm items-center'><img src={partner4} alt="" className='lg:h-16 h-10 rounded-none'/><p>Yumari</p></div>
+
       </div>
     </div>
 
     <div className='lg:px-40 px-10 flex lg:flex-row flex-col gap-6 justify-between py-10 bg-[#213c21]'>
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-2 lg:w-1/2 '>
       <div className='flex justify-start items-center gap-3'>
                 <img src={logo} alt='' className='h-7' />
                 <p className='text-[#dbbf70] lg:text-2xl text-xl font-medium ovo-regular '>INFINITY PRIME</p>
             </div>
-            <p className='text-white text-sm lg:text-start text-center'>Excellence is never an accident; it is a result of high intention.</p>
+            <p className='text-white text-sm lg:text-start text-center'>We shoulder your Supply Chain Challenges so you can confidently make-and-keep Bold
+            Promises to Everyone who matters to your Business</p>
       </div>
-      <div className='text-white'>
+      <div className='text-white '>
         <p className='text-sm'>© 2025 INFINITY PRIME. All rights reserved.</p>
         <p className='text-xs text-gray-300'>Based in Ras Al-Khaimah, UAE</p>
       </div>
