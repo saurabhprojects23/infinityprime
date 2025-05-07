@@ -1,18 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 // import img from "../../Assets/STRATEGIC SOURCING.jpg"
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 
-const page1 = () => {
+const Page1 = () => {
+
+  const navigate = useNavigate();
+
   return (
-    <div className='lg:px-52'>
-      <Link to={"/"} className='text-2xl text-[#213c21]'><IoMdArrowRoundBack className=''/></Link>
+    <div className='lg:px-52 absolute'>
+      
         {/* <img src={img} alt="" className='w-full h-96 rounded-lg shadow-lg'/> */}
 
 
         <div className='bg-[#213c21] py-10'>
-          
+        <p onClick={() => navigate(-1)} className='text-2xl text-[#dbbf70] relative '><IoMdArrowRoundBack className='-mb-6'/></p>
         <p className='flex justify-center text-center text-3xl font-serif font-bold  text-[#dbbf70] '>
             
             Supply Chain strategy and transformation
@@ -52,4 +55,4 @@ approach to reimagine your supply chain's strategic role while ensuring practica
   )
 }
 
-export default page1
+export default Page1

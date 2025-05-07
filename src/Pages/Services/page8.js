@@ -1,19 +1,23 @@
 import React from 'react'
 import { IoMdArrowRoundBack } from 'react-icons/io'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 // import img from "../../Assets/STRATEGIC SOURCING.jpg"
 
-const page8 = () => {
-  return (
-    <div className='lg:px-52'>
-       <Link to={"/"} className='text-2xl text-[#213c21]'><IoMdArrowRoundBack className=''/></Link>
-        {/* <img src={img} alt="" className='w-full h-96 rounded-lg shadow-lg'/> */}
+const Page8 = () => {
+const navigate = useNavigate()
 
-        <p className='flex justify-center text-center text-3xl font-serif font-bold bg-[#213c21] text-[#dbbf70] py-10'>
-            
-        Logistic and Transportaion
-            
-            </p>
+  return (
+
+                        <div className='lg:px-52 absolute'>
+                        {/* <img src={img} alt="" className='w-full h-96 rounded-lg shadow-lg'/> */}
+                        <div className='bg-[#213c21] py-10'>
+                        <p onClick={()=>navigate(-1)} className='text-2xl text-[#dbbf70] relative '><IoMdArrowRoundBack className='-mb-6'/></p>
+                        <p className='flex justify-center text-center text-3xl font-serif font-bold  text-[#dbbf70] '> 
+                        Logistic and Transportaion
+                            </p>
+                        </div>
+
+
         <p className='font-semibold text-xl py-6 text-[#213c21]'>
             
         Plan, Execute, and Control your transportation Efficiently
@@ -43,4 +47,4 @@ balance service requirements with cost optimization.
   )
 }
 
-export default page8
+export default Page8
