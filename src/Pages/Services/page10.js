@@ -1,9 +1,12 @@
 import React from 'react'
+import { IoMdArrowRoundBack } from 'react-icons/io'
+import { Link } from 'react-router-dom'
 // import img from "../../Assets/STRATEGIC SOURCING.jpg"
 
 const page10 = () => {
   return (
     <div className='lg:px-52'>
+       <Link to={"/"} className='text-2xl text-[#213c21]'><IoMdArrowRoundBack className=''/></Link>
         {/* <img src={img} alt="" className='w-full h-96 rounded-lg shadow-lg'/> */}
 
         <p className='flex justify-center text-center text-3xl font-serif font-bold bg-[#213c21] text-[#dbbf70] py-10'>

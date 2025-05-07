@@ -1,16 +1,27 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // import img from "../../Assets/STRATEGIC SOURCING.jpg"
+import { IoMdArrowRoundBack } from "react-icons/io";
+
 
 const page1 = () => {
   return (
     <div className='lg:px-52'>
+      <Link to={"/"} className='text-2xl text-[#213c21]'><IoMdArrowRoundBack className=''/></Link>
         {/* <img src={img} alt="" className='w-full h-96 rounded-lg shadow-lg'/> */}
 
-        <p className='flex justify-center text-center text-3xl font-serif font-bold bg-[#213c21] text-[#dbbf70] py-10'>
+
+        <div className='bg-[#213c21] py-10'>
+          
+        <p className='flex justify-center text-center text-3xl font-serif font-bold  text-[#dbbf70] '>
             
             Supply Chain strategy and transformation
-            
+
             </p>
+        </div>
+          
+            
+            
         <p className='font-semibold text-xl py-6 text-[#213c21]'>
             
             Align, Innovate, and Outperform your Industry
