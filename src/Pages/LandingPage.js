@@ -82,17 +82,18 @@ const openWhatsApp = () => {
       “We rewrite the rules of supply chain strategy -- <br/> because great Brands don't gamble with Excellence”
       </p>
       
-     {/* <div className='flex justify-center items-center gap-6 pt-8 '>
+     
+     <p className='mb-3 mt-3 p-1 px-3 font-serif text-base rounded-md lg:px-3 lg:py-2  text-green-950 bg-[#dbbf70]'>
+      We shoulder your Supply Chain Challenges so you can confidently <br/>make-and-keep Bold Promises to Everyone who matters to your Business
+      </p>
+      <div className='flex justify-center items-center gap-6 pt-8 '>
      <button onClick={() => scrollToSection('services')} className='p-1 px-3 text-lg lg:px-3 lg:py-2  text-green-950 bg-[#dbbf70] rounded-md hover:scale-110 transition-all'>
         Our Services
       </button>
       <button onClick={() => scrollToSection('contact')} className='p-1 px-3 text-lg lg:px-3 lg:py-2 text-white rounded-md border border-white hover:scale-110 transition-all'>
         Contact Us
       </button>
-     </div> */}
-     <p className='mb-6 mt-10 p-1 px-3 font-serif text-base rounded-md lg:px-3 lg:py-2  text-green-950 bg-[#dbbf70]'>
-      We shoulder your Supply Chain Challenges so you can confidently <br/>make-and-keep Bold Promises to Everyone who matters to your Business
-      </p>
+     </div>
     </div>
   </div>
 </div>
