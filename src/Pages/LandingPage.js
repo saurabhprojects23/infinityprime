@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import logo from "../Assets/logo.png"
 import bg from "../Assets/bgpic.png"
 import { GrShieldSecurity } from "react-icons/gr";
@@ -6,12 +6,12 @@ import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { IoBulbOutline } from "react-icons/io5";
 import { RiTeamFill } from "react-icons/ri";
 import { BsRecycle } from "react-icons/bs";
-import cards from "../Assets/data.js";
-import { FaAngleDown } from "react-icons/fa6";
+// import cards from "../Assets/data.js";
+// import { FaAngleDown } from "react-icons/fa6";
 import testimonials from "../Assets/testimonialData.js"
 import { FaAngleRight } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
-import { MdOutlineDateRange } from "react-icons/md";
+// import { MdOutlineDateRange } from "react-icons/md";
 // import PrintButton from "../Pages/PrintTest.js"
 import insight1 from "../Assets/ESG Compliance- Building Sustainable Supply Chains.jpg"
 import insight2 from "../Assets/Supply Chain Resiliency in the Post-Pandemic Era.jpg"
@@ -22,23 +22,6 @@ import partner2 from "../Assets/nathanlogo.jpeg"
 import partner3 from "../Assets/cccslogo.png"
 import partner4 from "../Assets/yumarilogo.jpeg"
 // import { Link } from 'react-router-dom';
-import {FaWhatsappSquare} from "react-icons/fa"
-
-import Page1 from "../Pages/Services/page1"
-import Page2 from "../Pages/Services/page2"
-import Page3 from "../Pages/Services/page3"
-import Page4 from "../Pages/Services/page4"
-import Page5 from "../Pages/Services/page5"
-import Page6 from "../Pages/Services/page6"
-import Page7 from "../Pages/Services/page7"
-import Page8 from "../Pages/Services/page8"
-import Page9 from "../Pages/Services/page9"
-import Page10 from "../Pages/Services/page10"
-import Page11 from "../Pages/Services/page11"
-import Page12 from "../Pages/Services/page12"
-import { Link } from 'react-router-dom';
-import services from '../Assets/servicedata.js';
-import ServiceModal from '../Pages/Services/page1';
 import Services from "../Pages/service.js"
 import CaseStudies from './CaseStudies.js';
 import Form from "./form.js"

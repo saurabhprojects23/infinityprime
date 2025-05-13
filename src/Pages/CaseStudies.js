@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { FaAngleRight } from 'react-icons/fa6'
 import case1 from "../Assets/SUPPLY CHAIN STRATEGY.jpg"
-import case2 from "../Assets/Supply Chain Technology .jpg"
-import case3 from "../Assets/SUSTAINABILITY (1).jpg"
+// import case2 from "../Assets/Supply Chain Technology .jpg"
+// import case3 from "../Assets/SUSTAINABILITY (1).jpg"
 import casestudy from "../Assets/casestudies"
 import casestudydetail from '../Assets/casestudydetail'
 import { RxCross2 } from 'react-icons/rx'
