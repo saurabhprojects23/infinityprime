@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaAngleRight } from 'react-icons/fa6'
-import case1 from "../Assets/SUPPLY CHAIN STRATEGY.jpg"
+// import case1 from "../Assets/SUPPLY CHAIN STRATEGY.jpg"
 // import case2 from "../Assets/Supply Chain Technology .jpg"
 // import case3 from "../Assets/SUSTAINABILITY (1).jpg"
 import casestudy from "../Assets/casestudies"
@@ -33,7 +33,7 @@ const CaseStudies = () => {
 
             <div className="rounded-lg overflow-hidden shadow-xl bg-white hover:scale-105 transition-all">
               <div className="h-40 w-full overflow-hidden">
-                <img src={case1} alt="" className="w-full h-full object-cover" />
+                <img src={cases.image} alt="" className="w-full h-full object-cover" />
               </div>
               <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#2e4e29]">
                 <div className='flex pb-2'><p className='text-[11px] p-[2px] bg-slate-100 rounded-full px-4 font-serif'>{cases.head}</p></div>
