@@ -49,7 +49,7 @@ const Form = () => {
           <MdOutlineDateRange className='text-[200px] text-[#dbbf70]'/>
           <p className='text-white text-4xl font-bold'>Let's Talk</p>
           <div className='text-white text-lg flex flex-col gap-1'>
-          <p>Email: r_maliki@yahoo.fr</p>
+          <p>Email: rachid@primerinfinity.com</p>
           <p>Mobile: +97150723945</p>
           <p onClick={openWhatsApp} className='flex items-center gap-2'>Chat with Us on Whatsapp <FaWhatsappSquare className='text-[#dbbf70] text-4xl cursor-pointer'/></p>
           </div>
