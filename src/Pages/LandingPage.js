@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from "../Assets/logo.png"
 import bg from "../Assets/bgpic.png"
 import { GrShieldSecurity } from "react-icons/gr";
@@ -16,19 +16,36 @@ import { MdOutlineDateRange } from "react-icons/md";
 import insight1 from "../Assets/ESG Compliance- Building Sustainable Supply Chains.jpg"
 import insight2 from "../Assets/Supply Chain Resiliency in the Post-Pandemic Era.jpg"
 import insight3 from "../Assets/The Digital Supply Chain.jpg"
-import case1 from "../Assets/SUPPLY CHAIN STRATEGY.jpg"
-import case2 from "../Assets/Supply Chain Technology .jpg"
-import case3 from "../Assets/SUSTAINABILITY (1).jpg"
 import rachidpic from "../Assets/IMG_655723.jpg"
 import partner1 from "../Assets/photonLogo.png"
 import partner2 from "../Assets/nathanlogo.jpeg"
 import partner3 from "../Assets/cccslogo.png"
 import partner4 from "../Assets/yumarilogo.jpeg"
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import {FaWhatsappSquare} from "react-icons/fa"
 
+import Page1 from "../Pages/Services/page1"
+import Page2 from "../Pages/Services/page2"
+import Page3 from "../Pages/Services/page3"
+import Page4 from "../Pages/Services/page4"
+import Page5 from "../Pages/Services/page5"
+import Page6 from "../Pages/Services/page6"
+import Page7 from "../Pages/Services/page7"
+import Page8 from "../Pages/Services/page8"
+import Page9 from "../Pages/Services/page9"
+import Page10 from "../Pages/Services/page10"
+import Page11 from "../Pages/Services/page11"
+import Page12 from "../Pages/Services/page12"
+import { Link } from 'react-router-dom';
+import services from '../Assets/servicedata.js';
+import ServiceModal from '../Pages/Services/page1';
+import Services from "../Pages/service.js"
+import CaseStudies from './CaseStudies.js';
+import Form from "./form.js"
 
-const LandingPage = () => {
+
+const LandingPage = (services) => {
+
 
 
   // const scrollToSection = (id) => {
@@ -42,13 +59,6 @@ const LandingPage = () => {
     const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
-};
-
-const openWhatsApp = () => {
-  const phone = '+971507239458'; // your phone number with country code
-  const message = 'Hello, I want to know more about your services';
-  const encodedMessage = encodeURIComponent(message);
-  window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
 };
 
 
@@ -76,14 +86,14 @@ const openWhatsApp = () => {
   <div id='home' className='absolute top-0 left-0 w-full h-full bg-[#213c21] bg-opacity-65 flex flex-col justify-center items-center text-center px-4'>
     <div className='max-w-2xl flex flex-col justify-center items-center '>
       <img src={logo} alt='' className='lg:h-24 md:h-20 h-16 pb-5 mb-5'/>
-      <p className='lg:text-5xl xl:text-6xl 2xl:text-7xl md:text-4xl text-3xl font-bold mb-4 text-[#dbbf70] ovo-regular'>INFINITY PRIME</p>
+      <p className='lg:text-5xl xl:text-6xl 2xl:text-7xl md:text-4xl text-3xl mb-4 text-[#dbbf70] font-serif'>INFINITY PRIME</p>
       <div className='flex justify-center items-center pb-4'><div className='w-28 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
       <p className='mb-6 mt-5 text-white text-xl font-serif'>
-      “We rewrite the rules of supply chain strategy -- <br/> because great Brands don't gamble with Excellence”
+      “We rewrite the rules of supply chain strategy<br/> because great Brands don't gamble with Excellence”
       </p>
       
      
-     <p className='mb-3 mt-3 p-1 px-3 font-serif text-base rounded-md lg:px-3 lg:py-2  text-green-950 bg-[#dbbf70]'>
+     <p className='mb-3 mt-3 p-1 px-3 font-serif text-lg rounded-md lg:px-3 lg:py-2  text-[#dbbf70]'>
       We shoulder your Supply Chain Challenges so you can confidently <br/>make-and-keep Bold Promises to Everyone who matters to your Business
       </p>
       <div className='flex justify-center items-center gap-6 pt-8 '>
@@ -115,17 +125,16 @@ const openWhatsApp = () => {
         <div className='flex lg:w-1/2 flex-col gap-2 lg:pr-24 text-center lg:text-start'>
             <p className='text-xl xl:text-2xl 2xl:text-3xl text-[#213c21]'>“We don't simply solve problems; we architect futures.”</p>
             <p className='text-sm xl:text-lg 2xl:text-xl'>“At INFINITY PRIME, we believe that every supply chain
-                    exists at the intersection of challenge and possibility.
-                    Where these forces meet, we discover the infinite
-                    potential waiting to be unleashed. Like astronomers
-                    mapping constellations across endless skies, we identify
-                    the critical points where strategic intervention creates
-                    transformative impact. We don t just optimize your supply
-                    chain—we expand its horizons, turning finite resources
-                    into boundless opportunities."</p>
+                  exists at the intersection of challenge and possibility.
+                  Where these forces meet, we discover the infinite
+                  potential waiting to be unleashed. Like astronomers
+                  mapping constellations across endless skies, we identify
+                  the critical points where strategic intervention creates
+                  transformative impact. We don t just optimize your supply
+                  chain—we expand its horizons, turning finite resources
+                  into boundless opportunities."</p>
         </div>
     </div>
-
 </div>
 
 
@@ -181,31 +190,9 @@ const openWhatsApp = () => {
     </div>
     </div>
 
-    {/* OUR SERVICES */}
+    {/* Services */}
 
-    <div className='py-10'>
-    <div className='p-6 ' id='services'>
-        <p className='lg:text-4xl text-2xl font-serif text-[#213c21] flex justify-self-center items-center pb-3 pt-3'>Our Services</p>
-        <div className='flex justify-center items-center pb-4'><div className='lg:w-20 md:w-16 w-12 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
-    </div>
-
-    <div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 lg:gap-6 gap-3 lg:px-40 px-2 pb-6">
-  {cards.map(card => (
-    <div key={card.id} className="rounded-lg hover:scale-105 transition-all overflow-hidden shadow-xl bg-white">
-      <div className="h-40 w-full overflow-hidden">
-        <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
-      </div>
-      <div className="lg:p-6 p-2 flex flex-col font-sans text-[#213c21]">
-        <h2 className="lg:text-lg text-base font-bold mb-2 line-clamp-2 h-14">{card.title}</h2>
-        <p className="text-sm font-semibold mb-4 h-12 line-clamp-2">{card.description}</p>
-        <Link to={card.link}  className="mt-auto font-semibold text-sm lg:px-4 py-2 hover:scale-105 border rounded-md bg-slate-200 transition flex justify-center items-center gap-3">
-          <p >Learn more</p> <span className=''><FaAngleDown/></span>
-        </Link>
-      </div>
-    </div>
-  ))}
-</div>
-    </div>
+    <Services/>
 
     {/* What Customers say-- testimonial */ }
 
@@ -301,120 +288,16 @@ making processes.</p>
 
    {/* Case Studies */}
 
-   <div className='pb-16 pt-10 bg-[#213c21]' id="case">
-   <div className='pb-6 '>
-        <p className='lg:text-3xl xl:text-4xl text-2xl font-serif text-[#dbbf70] flex justify-self-center items-center pb-2 pt-3'>Case Studies</p>
-        <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
-    </div>
-    <div className='grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-5 lg:px-20 2xl:px-40 px-4'>
+   <CaseStudies/>
 
-    <div className="rounded-lg overflow-hidden shadow-xl bg-white hover:scale-105 transition-all">
-      <div className="h-40 w-full overflow-hidden">
-        <img src={case1} alt="" className="w-full h-full object-cover" />
-      </div>
-      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#2e4e29]">
-        <div className='flex pb-2'><p className='text-[11px] p-[2px] bg-slate-100 rounded-full px-4 font-serif'>Retail</p></div>
-        <h2 className="text-lg font-bold mb-1 font-sans line-clamp-2">Global Retailer Supply Chain
-        Transformation</h2>
-        <p className="text-sm line-clamp-3 h-14">22% operational cost reduction through strategic
-        network redesign and process optimization</p>
-              <p className='text-xs text-black py-2'>
-                      Key Results:<br/>
-                      &nbsp; &nbsp; ◉ 22% operational cost reduction<br/>
-                      &nbsp; &nbsp; ◉ 98.7% on time deliver<br/>
-                      &nbsp; &nbsp; ◉ 15% inventory reduction
-              </p>
-        <button className="text-sm pb-2 font-bold transition flex justify-start items-center gap-3">
-          <p >View full case study</p> <span className=''><FaAngleRight/></span>
-        </button>
-      </div>
-    </div>
 
-    <div className="rounded-lg overflow-hidden shadow-xl bg-white hover:scale-105 transition-all">
-      <div className="h-40 w-full overflow-hidden">
-        <img src={case2} alt="" className="w-full h-full object-cover" />
-      </div>
-      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-[11px] p-[2px] bg-slate-100 rounded-full px-4 font-serif'>Healthcare</p></div>
-        <h2 className="text-lg font-bold mb-1 font-sans line-clamp-2">Pharmaceutical Manufacturer s Digital
-        Transformation</h2>
-        <p className="text-sm line-clamp-3 h-14">End to end visibility implementation reducing
-        order to delivery time by 35%</p>
-<p className='text-xs text-black py-2'>
-                      Key Results:<br/>
-                      &nbsp; &nbsp; ◉ 35% reduced order to delivery time<br/>
-                      &nbsp; &nbsp; ◉ 99.9% product traceability<br/>
-                      &nbsp; &nbsp; ◉ $4.2M annual savings
-              </p>
-        <button className="text-sm pb-2 font-bold transition flex justify-start items-center gap-3">
-          <p >View full case study</p> <span className=''><FaAngleRight/></span>
-        </button>
-      </div>
-    </div>
 
-    <div className="rounded-lg overflow-hidden shadow-xl bg-white hover:scale-105 transition-all">
-      <div className="h-40 w-full overflow-hidden">
-        <img src={case3} alt="" className="w-full h-full object-cover" />
-      </div>
-      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-[11px] p-[2px] bg-slate-100 rounded-full px-4 font-serif'>Automotive</p></div>
-        <h2 className="text-lg font-bold mb-1 font-sans line-clamp-2">Automotive Supplier s Sustainable Supply
-        Chain</h2>
-        <p className="text-sm line-clamp-3 h-14">Implementing ESG principles while improving
-        operational efficiency and supplier relationships</p>
-        <p className='text-xs text-black py-2'>
-                      Key Results:<br/>
-                      &nbsp; &nbsp; ◉ 42% carbon footprint reduction<br/>
-                      &nbsp; &nbsp; ◉ 28% supplier ontime improvement<br/>
-                      &nbsp; &nbsp; ◉ 18% total cost reduction
-              </p>
-          <button className="text-sm pb-2 font-bold transition flex justify-start items-center gap-3">
-          <p >View full case study</p> <span className=''><FaAngleRight/></span>
-        </button>
-      </div>
-    </div>
 
-    </div>
-   </div>
 
    {/* BOOK AN APPOINTMENT */}
 
-   <div className='pb-16 pt-10 bg-slate-50'>
-   <div className='p-6' id="contact">
-        <p className='lg:text-4xl text-2xl font-medium text-[#213c21] font-serif flex justify-self-center items-center pb-2 pt-3'>Book An Appointment</p>
-        <div className='flex justify-center items-center lg:pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
-    </div>
-    {/* <p className='text-5xl font-bold flex flex-col justify-center items-center p-10'>FORM<br/><span className='text-2xl'>(Work In Progress)</span></p> */}
-    <div className='py-6 shadow-xl bg-white rounded-md lg:mx-40 lg:p-10 px-4 flex lg:flex-row flex-col'>
-      <div className='bg-[#213c21] flex flex-col justify-center items-center lg:gap-6 gap-4 py-10 lg:px-14 px-5 lg:w-1/2'>
-      <MdOutlineDateRange className='text-[200px] text-[#dbbf70]'/>
-      <p className='text-white text-4xl font-bold'>Let's Talk</p>
-      <div className='text-white text-lg flex flex-col gap-1'>
-      <p>Email: r_maliki@yahoo.fr</p>
-      <p>Mobile: +97150723945</p>
-      <p onClick={openWhatsApp} className='flex items-center gap-2'>Chat with Us on Whatsapp <FaWhatsappSquare className='text-[#dbbf70] text-4xl cursor-pointer'/></p>
-      </div>
-      <p className='text-white text-center'>Ready to transform your Supply Chain form Operational Burdens
-      to Promise keeping Engines? <br/>Book a call with us</p>
-      </div>
-      <div className='py-3 px-10 lg:w-1/2'>
-      <p className='text-2xl font-[500 pb-3 font-serif text-[#213c21] w-full'>Request a Consultation</p>
-        <form className='flex flex-col gap-2 font-sans'>
-          <p>Name</p>
-          <input placeholder='Your Name' type='name' className='border p-1 rounded-md px-2 mb-1 shadow-sm'/>
-          <p>Email</p>
-          <input placeholder='You@company.com' type='email' className='border p-1 rounded-md px-2 mb-1 shadow-sm'/>
-          <p>Mobile Number</p>
-          <input placeholder='Your Mobile Number' type='number' className='border p-1 rounded-md px-2 mb-1 shadow-sm'/>
-          <p>Company</p>
-          <input placeholder='Your Company' type='text' className='border p-1 rounded-md px-2 mb-1 shadow-sm'/>
-          <p>How can we help ?</p>
-          <textarea placeholder='Your Message' rows="5" className='border p-1 rounded-md px-2 shadow-sm'/>
-          <button className='bg-[#dbbf70] text-[#213c21] p-3 rounded-md mt-2'>Schedule Now</button>
-        </form>
-      </div>
-    </div>
-   </div>
+   <Form/>
+
 
    {/* GLOBAL REACH */}
 

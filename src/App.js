@@ -3,6 +3,7 @@ import LandingPage from './Pages/LandingPage';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+
 import Page1 from "./Pages/Services/page1"
 import Page2 from "./Pages/Services/page2"
 import Page3 from "./Pages/Services/page3"
@@ -22,6 +23,8 @@ function App() {
    <BrowserRouter>
    <Routes>
     <Route path='/' element={<LandingPage/>}/>
+
+
     <Route path='/service1' element={<Page1/>} />
     <Route path='/service2' element={<Page2/>} />
     <Route path='/service3' element={<Page3/>} />
@@ -34,6 +37,7 @@ function App() {
     <Route path='/service10' element={<Page10/>} />
     <Route path='/service11' element={<Page11/>} />
     <Route path='/service12' element={<Page12/>} />
+    
 
    </Routes>
    </BrowserRouter>
