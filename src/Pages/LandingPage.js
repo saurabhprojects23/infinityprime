@@ -72,7 +72,7 @@ const LandingPage = (services) => {
       <p className='lg:text-5xl xl:text-6xl 2xl:text-7xl md:text-4xl text-3xl mb-4 text-[#dbbf70] font-serif'>INFINITY PRIME</p>
       <div className='flex justify-center items-center pb-4'><div className='w-28 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
       <p className='mb-6 mt-5 text-white text-xl font-serif'>
-      “We rewrite the rules of supply chain strategy<br/> because great Brands don't gamble with Excellence”
+      We rewrite the rules of supply chain strategy<br/> because great Brands don't gamble with Excellence
       </p>
       
      

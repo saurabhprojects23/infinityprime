@@ -69,7 +69,7 @@ const Form = () => {
               <input placeholder='Your Company' name='user_company' type="text" required className='border p-1 rounded-md px-2 mb-1 shadow-sm'/>
               <p>How can we help ?</p>
               <textarea placeholder='Your Message' name='user_message' required rows="5" className='border p-1 rounded-md px-2 shadow-sm'/>
-              <button className='bg-[#dbbf70] text-[#213c21] p-3 rounded-md mt-2' type="submit">Schedule Now</button>
+              <button className='bg-[#dbbf70] text-[#213c21] p-3 rounded-md mt-2' type="submit">Request Now</button>
             </form>
           </div>
         </div>
