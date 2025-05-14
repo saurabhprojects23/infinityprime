@@ -9,13 +9,10 @@ import { BsRecycle } from "react-icons/bs";
 // import cards from "../Assets/data.js";
 // import { FaAngleDown } from "react-icons/fa6";
 import testimonials from "../Assets/testimonialData.js"
-import { FaAngleRight } from "react-icons/fa6";
+// import { FaAngleRight } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
 // import { MdOutlineDateRange } from "react-icons/md";
 // import PrintButton from "../Pages/PrintTest.js"
-import insight1 from "../Assets/ESG Compliance- Building Sustainable Supply Chains.jpg"
-import insight2 from "../Assets/Supply Chain Resiliency in the Post-Pandemic Era.jpg"
-import insight3 from "../Assets/The Digital Supply Chain.jpg"
 import rachidpic from "../Assets/IMG_655723.jpg"
 import partner1 from "../Assets/photonLogo.png"
 import partner2 from "../Assets/nathanlogo.jpeg"
@@ -25,6 +22,7 @@ import partner4 from "../Assets/yumarilogo.jpeg"
 import Services from "../Pages/service.js"
 import CaseStudies from './CaseStudies.js';
 import Form from "./form.js"
+import Insights from './insights.js';
 
 
 const LandingPage = (services) => {
@@ -210,63 +208,8 @@ const LandingPage = (services) => {
 
    {/* LATEST INSIGHTS */}
 
-   <div className='pb-14 pt-10' id="insights">
-   <div className='pb-8 '>
-        <p className='lg:text-3xl xl:text-4xl text-2xl font-bold text-[#213c21] flex justify-self-center items-center pb-2 pt-3'>Latest Insights</p>
-        <div className='flex justify-center items-center pb-4'><div className='lg:w-28 md:w-20 w-16 h-1 bg-[#dbbf70] rounded-3xl flex justify-center items-center'></div></div>
-    </div>
-    <div className='grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-5 lg:px-20 2xl:px-40 px-4'>
-
-    <div className="rounded-lg overflow-hidden shadow-xl bg-white h-96 hover:scale-105 transition-all">
-      <div className="h-40 w-full overflow-hidden">
-        <img src={insight2} alt="" className="w-full h-full object-cover" />
-      </div>
-      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
-        <div className='flex pb-2 '><p className='text-[10px] p-[2px] border border-[#213c21] rounded-full px-4'>Strategy</p></div>
-        <h2 className=" text-sm font-bold mb-1 line-clamp-2 h-10">Supply Chain Resiliency in the Post-Pandemic Era</h2>
-        <p className="text-sm mb-2 line-clamp-3 h-16">Explore strategies for building robust supply chains
-that can withstand global disruptions and market
-volatility.</p>
-        <button className="text-sm font-bold transition flex justify-start items-center gap-3">
-          <p >Read article</p> <span className=''><FaAngleRight/></span>
-        </button>
-      </div>
-    </div>
-
-    <div className="rounded-lg overflow-hidden shadow-xl bg-white h-96 hover:scale-105 transition-all">
-      <div className="h-40 w-full overflow-hidden">
-        <img src={insight3} alt="" className="w-full h-full object-cover" />
-      </div>
-      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-[10px] p-[2px] border border-[#213c21] rounded-full px-4'>Technology</p></div>
-        <h2 className="text-sm font-bold mb-1 line-clamp-2 h-10">The Digital Supply Chain: Leveraging AI and
-        Machine Learning</h2>
-        <p className="text-sm mb-2 line-clamp-3 h-16">How advanced technologies are transforming
-forecasting, inventory management, and decision
-making processes.</p>
-        <button className="text-sm font-bold transition flex justify-start items-center gap-3">
-          <p >Read article</p> <span className=''><FaAngleRight/></span>
-        </button>
-      </div>
-    </div>
-
-    <div className="rounded-lg overflow-hidden shadow-xl bg-white h-96 hover:scale-105 transition-all">
-      <div className="h-40 w-full overflow-hidden">
-        <img src={insight1} alt="" className="w-full h-full object-cover" />
-      </div>
-      <div className="lg:p-4 p-2 flex flex-col gap-2 font-sans text-[#213c21]">
-        <div className='flex pb-2'><p className='text-[10px] p-[2px] border border-[#213c21] rounded-full px-4'>Sustainability</p></div>
-        <h2 className="text-sm font-bold mb-1 line-clamp-2 h-10">ESG Compliance: Building Sustainable Supply
-        Chains</h2>
-        <p className="text-sm mb-2 line-clamp-3 h-16">Practical approaches to integrating environmental, social, and governance principles into supply chain operations.</p>
-        <button className="text-sm font-bold transition flex justify-start items-center gap-3">
-          <p >Read article</p> <span className=''><FaAngleRight/></span>
-        </button>
-      </div>
-    </div>
-
-    </div>
-   </div>
+  
+    <Insights/>
 
 
    {/* Case Studies */}
