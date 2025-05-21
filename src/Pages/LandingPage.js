@@ -28,7 +28,6 @@ import Insights from './insights.js';
 const LandingPage = (services) => {
 
 
-
   // const scrollToSection = (id) => {
   //   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   // };
@@ -56,7 +55,7 @@ const LandingPage = (services) => {
                 <p className='cursor-pointer' onClick={() => scrollToSection('services')}>Services</p>
                 <p className='cursor-pointer' onClick={() => scrollToSection('case')}>Case Studies</p>
                 <p className='cursor-pointer' onClick={() => scrollToSection('insights')}>Insights</p>
-                <button className='px-2 p-1 border border-white rounded-sm' onClick={() => scrollToSection('contact')}>Book an Appointment</button>
+                <button className='p-1 px-3 text-lg lg:px-3 lg:py-1  text-green-950 bg-[#dbbf70] rounded-md hover:scale-110 transition-all' onClick={() => scrollToSection('contact')}>Book an Appointment</button>
             </div>
         </div>
         <div className='relative'>
@@ -78,12 +77,13 @@ const LandingPage = (services) => {
       We shoulder your Supply Chain Challenges so you can confidently <br/>make-and-keep Bold Promises to Everyone who matters to your Business
       </p>
       <div className='flex justify-center items-center gap-6 pt-8 '>
-     <button onClick={() => scrollToSection('services')} className='p-1 px-3 text-lg lg:px-3 lg:py-2  text-green-950 bg-[#dbbf70] rounded-md hover:scale-110 transition-all'>
+        <button onClick={() => scrollToSection('services')} className='p-1 px-3 text-lg lg:px-3 lg:py-2 text-white rounded-md border border-white hover:scale-110 transition-all'>
         Our Services
       </button>
-      <button onClick={() => scrollToSection('contact')} className='p-1 px-3 text-lg lg:px-3 lg:py-2 text-white rounded-md border border-white hover:scale-110 transition-all'>
+     <button onClick={() => scrollToSection('contact')} className='p-1 px-3 text-lg lg:px-3 lg:py-2  text-green-950 bg-[#dbbf70] rounded-md hover:scale-110 transition-all'>
         Contact Us
       </button>
+      
      </div>
     </div>
   </div>
